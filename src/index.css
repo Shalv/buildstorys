@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root { color-scheme: light; }
+html { background: #f4f1eb; }
+body { margin: 0; overflow-x: hidden; }
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-accent {
+  font-family: 'Space Grotesk', monospace;
+}
+
+.hero-film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  animation: grain .22s steps(2) infinite;
+}
+.hero-reveal { animation: heroReveal .9s cubic-bezier(.22,1,.36,1) both; }
+.hero-delay-1 { animation-delay: .14s; }
+.hero-delay-2 { animation-delay: .28s; }
+.hero-delay-3 { animation-delay: .42s; }
+.premium-cta { display:inline-flex; align-items:center; justify-content:center; gap:.75rem; min-height:3.25rem; padding:0 1.5rem; border:1px solid #d5ae7a; background:#d5ae7a; color:#111; font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; transition:.35s ease; }
+.premium-cta:hover { background:#f0d5b1; border-color:#f0d5b1; transform:translateY(-2px); }
+.premium-cta--ghost { background:rgba(255,255,255,.04); color:#fff; border-color:rgba(255,255,255,.38); backdrop-filter:blur(10px); }
+.premium-cta--ghost:hover { background:rgba(255,255,255,.14); border-color:#fff; }
+.film-control { display:grid; place-items:center; width:2.65rem; height:2.65rem; border:1px solid rgba(255,255,255,.35); border-radius:999px; background:rgba(0,0,0,.2); backdrop-filter:blur(10px); transition:.3s ease; }
+.film-control:hover { color:#e7caa5; border-color:#e7caa5; transform:scale(1.06); }
+main > section:not(#home), main > div { content-visibility:auto; contain-intrinsic-size:800px; }
+@keyframes heroReveal { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+@keyframes grain { 0% { transform:translate(0,0) } 25% { transform:translate(1%,-1%) } 50% { transform:translate(-1%,1%) } 75% { transform:translate(1%,1%) } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; } }
