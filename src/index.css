@@ -2,7 +2,7 @@
 
 :root { color-scheme: light; }
 html { background: #f4f1eb; }
-body { margin: 0; overflow-x: hidden; }
+body { margin: 0; overflow-x: hidden; background:#f4f1eb; }
 
 @layer base {
   body {
@@ -29,6 +29,24 @@ body { margin: 0; overflow-x: hidden; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
   animation: grain .22s steps(2) infinite;
 }
+.architectural-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  animation: grain .24s steps(2) infinite;
+  pointer-events:none;
+}
+.chapter-reveal { animation:chapterReveal .95s cubic-bezier(.22,1,.36,1) both; }
+.chapter-delay-1 { animation-delay:.12s; }
+.chapter-delay-2 { animation-delay:.24s; }
+.chapter-delay-3 { animation-delay:.36s; }
+.page-enter { animation:pageEnter .65s cubic-bezier(.22,1,.36,1) both; }
+.editorial-page { background:#f4f1eb; }
+.editorial-page > div > section:not(.chapter-hero),
+.editorial-page > section:not(.chapter-hero) { position:relative; }
+.editorial-page [class*="rounded-xl"],
+.editorial-page [class*="rounded-2xl"] { transition:transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease, border-color .45s ease; }
+.editorial-page [class*="rounded-xl"]:hover,
+.editorial-page [class*="rounded-2xl"]:hover { transform:translateY(-4px); }
+.editorial-page h2 { letter-spacing:-.025em; }
 .hero-reveal { animation: heroReveal .9s cubic-bezier(.22,1,.36,1) both; }
 .hero-delay-1 { animation-delay: .14s; }
 .hero-delay-2 { animation-delay: .28s; }
@@ -41,5 +59,10 @@ body { margin: 0; overflow-x: hidden; }
 .film-control:hover { color:#e7caa5; border-color:#e7caa5; transform:scale(1.06); }
 main > section:not(#home), main > div { content-visibility:auto; contain-intrinsic-size:800px; }
 @keyframes heroReveal { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+@keyframes chapterReveal { from { opacity:0; transform:translateY(34px); filter:blur(5px); } to { opacity:1; transform:none; filter:none; } }
+@keyframes pageEnter { from { opacity:0; } to { opacity:1; } }
 @keyframes grain { 0% { transform:translate(0,0) } 25% { transform:translate(1%,-1%) } 50% { transform:translate(-1%,1%) } 75% { transform:translate(1%,1%) } }
+@media (max-width:640px) {
+  .chapter-hero .premium-cta { width:100%; }
+}
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; } }

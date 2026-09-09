@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Compass, Phone, Mail, MapPin, ArrowUp, Sparkles, ExternalLink } from 'lucide-react';
 import { COMPANY_PROFILE } from '../data/websiteData';
 
 interface FooterProps {
@@ -52,95 +52,85 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
             </div>
           </div>
 
-          {/* Col 2: Services Quick Links */}
+          {/* Col 2: Services Sub-Pages */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
-              Services
+              Services &amp; Disciplines
             </h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Residential Architecture
+                <button onClick={() => onNavigate('services/architecture')} className="hover:text-white transition-colors text-left">
+                  Architecture &amp; Sanctions
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Commercial Architecture
+                <button onClick={() => onNavigate('services/interiors')} className="hover:text-white transition-colors text-left">
+                  Bespoke Luxury Interiors
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Retail Architecture
+                <button onClick={() => onNavigate('services/turnkey')} className="hover:text-white transition-colors text-left">
+                  Turnkey Design-Build Handover
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Industrial Architecture
+                <button onClick={() => onNavigate('services/visualisation')} className="hover:text-white transition-colors text-left">
+                  3D Visualisation &amp; BIM
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Residential Interior Design
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Commercial Interiors
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
-                  Turnkey Interior Solutions
+                <button onClick={() => onNavigate('services')} className="text-[#C5A880] hover:text-white transition-colors text-left font-mono text-[11px]">
+                  View All 9 Services &rarr;
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Projects & Process */}
+          {/* Col 3: Projects & Method */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
               Portfolio &amp; Method
             </h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => onNavigate('projects')} className="hover:text-white transition-colors">
-                  The Courtyard House
+                <button onClick={() => onNavigate('projects/architecture')} className="hover:text-white transition-colors text-left">
+                  Architectural Villas
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects')} className="hover:text-white transition-colors">
-                  The Modern Villa
+                <button onClick={() => onNavigate('projects/interiors')} className="hover:text-white transition-colors text-left">
+                  Residential Interiors
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects')} className="hover:text-white transition-colors">
-                  The Urban Residence
+                <button onClick={() => onNavigate('projects/commercial')} className="hover:text-white transition-colors text-left">
+                  Commercial &amp; Workspaces
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects')} className="hover:text-white transition-colors">
-                  The Commercial Studio
+                <button onClick={() => onNavigate('projects/industrial')} className="hover:text-white transition-colors text-left">
+                  Industrial Facilities
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('process')} className="hover:text-white transition-colors">
+                <button onClick={() => onNavigate('process')} className="hover:text-white transition-colors text-left">
                   The Build Storys Way (7 Steps)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('transformations')} className="hover:text-white transition-colors">
-                  Transformations
+                <button onClick={() => onNavigate('transformations')} className="hover:text-white transition-colors text-left">
+                  Before &amp; After Transformations
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('associations')} className="hover:text-white transition-colors">
-                  Client &amp; Brand Associations
+                <button onClick={() => onNavigate('estimator')} className="hover:text-white transition-colors text-left">
+                  Cost &amp; Timeline Estimator
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Studio Contact */}
+          {/* Col 4: Studio Contact & Hours */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
               Studio Location
@@ -159,12 +149,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
-                <a href="tel:+916366778826" className="hover:text-white">
-                  +91 63667 78826
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
                 <a href={`mailto:${COMPANY_PROFILE.contact.primaryEmail}`} className="hover:text-white">
                   {COMPANY_PROFILE.contact.primaryEmail}
@@ -172,31 +156,37 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
               </div>
               <div className="pt-2">
                 <button
-                  onClick={onOpenConsultation}
+                  onClick={() => onNavigate('contact')}
                   className="px-4 py-2 rounded bg-[#1A1E24] hover:bg-[#252930] text-[#C5A880] border border-stone-800 text-[11px] font-semibold uppercase tracking-wider transition-colors block w-full text-center"
                 >
-                  Book Studio Visit
+                  Visit Sahakar Nagar Studio
                 </button>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-stone-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
-          <div>
-            &copy; {new Date().getFullYear()} {COMPANY_PROFILE.legalName}. All rights reserved.
-          </div>
-
+          <p>
+            &copy; {new Date().getFullYear()} {COMPANY_PROFILE.legalName}. All rights reserved. Registered Council of Architecture &amp; RERA Compliant.
+          </p>
           <div className="flex items-center gap-6">
-            <span className="text-stone-400">Sahakar Nagar, Bengaluru</span>
-            <button 
+            <button onClick={() => onNavigate('testimonials')} className="hover:text-stone-300">
+              Reviews &amp; FAQs
+            </button>
+            <button onClick={() => onNavigate('insights')} className="hover:text-stone-300">
+              Design Journal
+            </button>
+            <button onClick={() => onNavigate('about')} className="hover:text-stone-300">
+              Ethos
+            </button>
+            <button
               onClick={scrollToTop}
-              className="hover:text-stone-300 flex items-center gap-1.5 transition-colors"
+              className="flex items-center gap-1 text-[#C5A880] hover:text-white transition-colors"
             >
               <span>Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5 text-[#C5A880]" />
+              <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>

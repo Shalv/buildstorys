@@ -22,6 +22,7 @@ import { COMPANY_PROFILE } from '../data/websiteData';
 interface ConsultationFormProps {
   initialService?: string;
   initialProject?: string;
+  prefilledScope?: { area?: string; budget?: string };
   onCloseModal?: () => void;
   isModal?: boolean;
 }
@@ -29,6 +30,7 @@ interface ConsultationFormProps {
 export const ConsultationForm: React.FC<ConsultationFormProps> = ({
   initialService = '',
   initialProject = '',
+  prefilledScope,
   onCloseModal,
   isModal = false
 }) => {
@@ -39,8 +41,8 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
     projectLocation: 'Bengaluru, Karnataka',
     serviceRequired: initialService || 'Residential Architecture',
     propertyType: 'Independent Villa / Bungalow',
-    approximateArea: '3,500',
-    estimatedBudget: '₹50 Lakhs – ₹1 Crore',
+    approximateArea: prefilledScope?.area || '3,500',
+    estimatedBudget: prefilledScope?.budget || '₹50 Lakhs – ₹1 Crore',
     expectedStartDate: 'Within 1 - 2 Months',
     message: initialProject ? `Inquiry inspired by ${initialProject}. We would like to discuss our site requirements and schedule a design discovery session.` : '',
     preferredMethod: 'In-person at Sahakar Nagar Studio',
@@ -57,6 +59,16 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
       setFormData(prev => ({ ...prev, serviceRequired: initialService }));
     }
   }, [initialService]);
+
+  useEffect(() => {
+    if (prefilledScope) {
+      setFormData(prev => ({
+        ...prev,
+        approximateArea: prefilledScope.area || prev.approximateArea,
+        estimatedBudget: prefilledScope.budget || prev.estimatedBudget
+      }));
+    }
+  }, [prefilledScope]);
 
   useEffect(() => {
     if (initialProject) {

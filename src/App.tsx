@@ -1,54 +1,200 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { CompanyProfile } from './components/CompanyProfile';
-import { ServicesSection } from './components/ServicesSection';
-import { ProjectsSection } from './components/ProjectsSection';
-import { ProjectDetailModal } from './components/ProjectDetailModal';
-import { ProcessSection } from './components/ProcessSection';
-import { BeforeAfterSlider } from './components/BeforeAfterSlider';
-import { CostEstimator } from './components/CostEstimator';
-import { ClientAssociations } from './components/ClientAssociations';
-import { TestimonialsFaq } from './components/TestimonialsFaq';
-import { BlogInsights } from './components/BlogInsights';
-import { ConsultationForm } from './components/ConsultationForm';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { ProjectDetailModal } from './components/ProjectDetailModal';
+import { ConsultationForm } from './components/ConsultationForm';
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ServicesPage } from './pages/ServicesPage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { ProcessPage } from './pages/ProcessPage';
+import { TransformationsPage } from './pages/TransformationsPage';
+import { EstimatorPage } from './pages/EstimatorPage';
+import { AssociationsPage } from './pages/AssociationsPage';
+import { TestimonialsPage } from './pages/TestimonialsPage';
+import { InsightsPage } from './pages/InsightsPage';
+import { ContactPage } from './pages/ContactPage';
 import { Project, COMPANY_PROFILE } from './data/websiteData';
 import { MessageSquare, PhoneCall, Sparkles } from 'lucide-react';
 
 export default function App() {
+  // Read initial route from URL hash (e.g., #/services/architecture or #about)
+  const getInitialRoute = () => {
+    const hash = window.location.hash.replace(/^#\/?/, '');
+    return hash || 'home';
+  };
+
+  const [currentRoute, setCurrentRoute] = useState<string>(getInitialRoute);
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [prefilledService, setPrefilledService] = useState<string>('');
   const [prefilledProject, setPrefilledProject] = useState<string>('');
-  const [activeSection, setActiveSection] = useState<string>('home');
+  const [prefilledScope, setPrefilledScope] = useState<{ area?: string; budget?: string }>({});
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
-    
-    // Mapping compound IDs to DOM elements
-    const elementId = sectionId.startsWith('services-') 
-      ? 'services' 
-      : sectionId.startsWith('projects-') 
-        ? 'projects' 
-        : sectionId;
+  // Sync route on browser back/forward actions
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace(/^#\/?/, '') || 'home';
+      setCurrentRoute(hash);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
-    const el = document.getElementById(elementId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleNavigate = (route: string) => {
+    setCurrentRoute(route);
+    window.location.hash = `#/${route}`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleOpenConsultationModal = (service = '', project = '') => {
+  const handleOpenConsultationModal = (service = '', project = '', scope = {}) => {
     setPrefilledService(service);
     setPrefilledProject(project);
+    setPrefilledScope(scope);
     setIsConsultationModalOpen(true);
   };
 
   const handleApplyEstimate = (details: { service: string; area: string; budget: string }) => {
     setPrefilledService(details.service);
+    setPrefilledScope({ area: details.area, budget: details.budget });
     setIsConsultationModalOpen(true);
+  };
+
+  // Route Dispatcher
+  const renderCurrentPage = () => {
+    const route = currentRoute.toLowerCase();
+
+    // Home
+    if (route === 'home' || route === '') {
+      return (
+        <HomePage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onSelectProject={(proj) => setSelectedProject(proj)}
+          onNavigate={handleNavigate}
+          onApplyEstimate={handleApplyEstimate}
+        />
+      );
+    }
+
+    // About Studio
+    if (route === 'about') {
+      return (
+        <AboutPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Services & Sub-Headings
+    if (route.startsWith('services')) {
+      const parts = route.split('/');
+      const subHeading = parts[1] || 'all'; // 'architecture' | 'interiors' | 'turnkey' | 'visualisation' | 'all'
+      return (
+        <ServicesPage
+          subHeading={subHeading}
+          onSelectServiceForConsultation={(serviceName) => handleOpenConsultationModal(serviceName)}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Projects & Sub-Headings
+    if (route.startsWith('projects')) {
+      const parts = route.split('/');
+      const subHeading = parts[1] || 'all'; // 'architecture' | 'interiors' | 'commercial' | 'industrial' | 'all'
+      return (
+        <ProjectsPage
+          subHeading={subHeading}
+          onSelectProject={(proj) => setSelectedProject(proj)}
+          onConsultSimilar={(projName) => handleOpenConsultationModal('', projName)}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // The Build Storys Way (7 Steps)
+    if (route === 'process') {
+      return (
+        <ProcessPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Before & After Transformations
+    if (route === 'transformations') {
+      return (
+        <TransformationsPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Cost & Timeline Estimator
+    if (route === 'estimator') {
+      return (
+        <EstimatorPage
+          onApplyEstimate={handleApplyEstimate}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Client & Brand Associations
+    if (route === 'associations') {
+      return (
+        <AssociationsPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Testimonials & FAQs
+    if (route === 'testimonials') {
+      return (
+        <TestimonialsPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Design Insights & Journal
+    if (route === 'insights') {
+      return (
+        <InsightsPage
+          onOpenConsultation={() => handleOpenConsultationModal()}
+          onNavigate={handleNavigate}
+        />
+      );
+    }
+
+    // Contact & Studio Visit
+    if (route === 'contact') {
+      return (
+        <ContactPage
+          onNavigate={handleNavigate}
+          preselectedService={prefilledService}
+          prefilledScope={prefilledScope}
+        />
+      );
+    }
+
+    // Fallback to Home
+    return (
+      <HomePage
+        onOpenConsultation={() => handleOpenConsultationModal()}
+        onSelectProject={(proj) => setSelectedProject(proj)}
+        onNavigate={handleNavigate}
+        onApplyEstimate={handleApplyEstimate}
+      />
+    );
   };
 
   return (
@@ -57,78 +203,20 @@ export default function App() {
       {/* Primary Sticky Architectural Navigation */}
       <Navbar 
         onOpenConsultation={() => handleOpenConsultationModal()}
-        activeSection={activeSection}
-        onNavigate={scrollToSection}
+        activeSection={currentRoute}
+        onNavigate={handleNavigate}
       />
 
-      {/* Main Content Sections */}
+      {/* Main Routed Page Content */}
       <main className="flex-1">
-        
-        {/* 1. Architectural Hero Banner with Key Metrics */}
-        <section id="home">
-          <Hero 
-            onOpenConsultation={() => handleOpenConsultationModal()}
-            onExploreProjects={() => scrollToSection('projects')}
-            onExploreProcess={() => scrollToSection('process')}
-          />
-        </section>
-
-        {/* 2. Company Profile & Design Philosophy */}
-        <CompanyProfile 
-          onOpenConsultation={() => handleOpenConsultationModal()}
-        />
-
-        {/* 3. Featured Projects Showcase */}
-        <ProjectsSection 
-          onSelectProject={(proj) => setSelectedProject(proj)}
-          onConsultSimilar={(projectName) => handleOpenConsultationModal('', projectName)}
-        />
-
-        {/* 4. Comprehensive Services Breakdown */}
-        <ServicesSection 
-          onSelectServiceForConsultation={(serviceName) => handleOpenConsultationModal(serviceName)}
-        />
-
-        {/* 5. Seven-Step Delivery Method */}
-        <ProcessSection 
-          onOpenConsultation={() => handleOpenConsultationModal()}
-        />
-
-        {/* 6. Before-and-After Transformation Slider */}
-        <BeforeAfterSlider />
-
-        {/* 7. Interactive Project & Budget Estimator */}
-        <CostEstimator 
-          onApplyEstimateToConsultation={handleApplyEstimate}
-        />
-
-        {/* 8. Prestigious Client & Property Associations */}
-        <ClientAssociations />
-
-        {/* 9. Client Testimonials & Frequently Asked Questions */}
-        <TestimonialsFaq />
-
-        {/* 10. Architectural Insights & Field Notes */}
-        <BlogInsights 
-          onOpenConsultation={() => handleOpenConsultationModal()}
-        />
-
-        {/* 11. Full Consultation Form with Automated Triggers */}
-        <section id="consultation" className="bg-stone-100/60 border-t border-stone-200">
-          <ConsultationForm 
-            initialService={prefilledService}
-            initialProject={prefilledProject}
-          />
-        </section>
-
-        {/* 12. Sahakar Nagar Studio Location & Contact */}
-        <ContactSection />
-
+        <div key={currentRoute} className="editorial-page page-enter" data-route={currentRoute.split('/')[0]}>
+          {renderCurrentPage()}
+        </div>
       </main>
 
       {/* Global Footer */}
       <Footer 
-        onNavigate={scrollToSection}
+        onNavigate={handleNavigate}
         onOpenConsultation={() => handleOpenConsultationModal()}
       />
 
@@ -148,12 +236,13 @@ export default function App() {
       {isConsultationModalOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200">
           <div 
-            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden my-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <ConsultationForm 
               initialService={prefilledService}
               initialProject={prefilledProject}
+              prefilledScope={prefilledScope}
               onCloseModal={() => setIsConsultationModalOpen(false)}
               isModal={true}
             />
