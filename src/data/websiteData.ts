@@ -42,6 +42,7 @@ export interface ProcessStep {
   activities: string[];
   deliverable: string;
   duration: string;
+  image?: string;
 }
 
 export interface Testimonial {
@@ -49,6 +50,7 @@ export interface Testimonial {
   clientCode: string;
   clientType: string;
   clientName: string;
+  image?: string;
   location: string;
   quote: string;
   rating: number;
@@ -711,7 +713,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Defining project scope and key milestones"
     ],
     deliverable: "Comprehensive Project Brief & Feasibility Baseline",
-    duration: "Phase 1"
+    duration: "Phase 1",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 2,
@@ -727,7 +730,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Structural grid and service placement"
     ],
     deliverable: "Finalized Architectural & Furniture Layouts",
-    duration: "Phase 2"
+    duration: "Phase 2",
+    image: "https://images.unsplash.com/photo-1503387837-b154d5074bd2?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 3,
@@ -743,7 +747,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Client collaborative feedback & refinements"
     ],
     deliverable: "Photorealistic 3D Visualisation Package",
-    duration: "Phase 3"
+    duration: "Phase 3",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 4,
@@ -759,7 +764,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Material specification documentation"
     ],
     deliverable: "Construction-Ready Technical Drawing Dossier",
-    duration: "Phase 4"
+    duration: "Phase 4",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 5,
@@ -775,7 +781,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Procurement timeline and resource scheduling"
     ],
     deliverable: "Locked Itemized BOQ & Project Execution Agreement",
-    duration: "Phase 5"
+    duration: "Phase 5",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 6,
@@ -791,7 +798,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Regular milestone audits and client progress updates"
     ],
     deliverable: "Milestone-Driven Physical Build & Quality Sign-Offs",
-    duration: "Phase 6"
+    duration: "Phase 6",
+    image: "https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=90"
   },
   {
     stepNumber: 7,
@@ -807,7 +815,8 @@ export const SEVEN_STEP_PROCESS: ProcessStep[] = [
       "Handover of keys, warranty documentation, and care guide"
     ],
     deliverable: "Keys in Hand, Warranty Binder & Space Celebration",
-    duration: "Phase 7"
+    duration: "Phase 7",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=90"
   }
 ];
 
@@ -819,6 +828,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientType: "RESIDENTIAL CLIENT",
     clientName: "Ananya R.",
     location: "Bangalore, Karnataka",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90",
     quote:
       "We were looking for the best architects in Bangalore who could understand what we actually wanted for our home. Build Storys listened to our ideas, guided us through every stage and created a space that feels completely ours.",
     rating: 5
@@ -829,6 +839,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientType: "INTERIOR DESIGN CLIENT",
     clientName: "Veera K.",
     location: "Bangalore, Karnataka",
+    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=90",
     quote:
       "From the initial architecture plan to the final interiors, the Build Storys team made everything feel simple and well organised. They understood our lifestyle and paid attention to every detail. Truly one of the best experiences we’ve had with a design team.",
     rating: 5
@@ -839,6 +850,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientType: "VILLA CLIENT",
     clientName: "Karthik S.",
     location: "Bangalore, Karnataka",
+    image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=90",
     quote:
       "From the initial architecture plan to the final interiors, the Build Storys team made everything feel simple and well organised. They understood our lifestyle and paid attention to every detail. Truly one of the best experiences we’ve had with a design team.",
     rating: 5

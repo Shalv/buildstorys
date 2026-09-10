@@ -86,6 +86,21 @@ export const TestimonialsFaq: React.FC = () => {
               </p>
             </div>
           </div>
+
+          <div className="relative rounded-lg overflow-hidden h-56 sm:h-72">
+            <img
+              src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=2400&q=90"
+              alt="Completed Build Storys residence with warm interior lighting at dusk"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,11,11,.82)_0%,rgba(10,11,11,.25)_60%,transparent_100%)]" />
+            <div className="relative z-10 h-full flex items-center px-8 sm:px-12">
+              <p className="font-serif italic text-xl sm:text-3xl text-white max-w-md leading-snug">
+                &ldquo;The space felt like ours before we'd even moved in.&rdquo;
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Client Testimonials Section matching buildstorys.com */}
@@ -111,13 +126,23 @@ export const TestimonialsFaq: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS_DATA.map((t) => (
-              <div 
+              <div
                 key={t.id}
-                className="bg-white p-7 rounded-lg border border-stone-200 shadow-xs flex flex-col justify-between space-y-6 hover:border-[#C5A880] transition-all"
+                className="group relative overflow-hidden rounded-lg bg-[#14171B] text-white shadow-lg min-h-[420px] flex flex-col justify-end"
               >
-                <div className="space-y-4">
+                {t.image && (
+                  <img
+                    src={t.image}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 grayscale-[15%] transition-all duration-700 group-hover:opacity-85 group-hover:scale-105"
+                  />
+                )}
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,11,11,.15)_0%,rgba(10,11,11,.35)_35%,rgba(10,11,11,.96)_100%)]" />
+
+                <div className="relative z-10 p-7 space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono font-bold text-[#B89366] bg-[#B89366]/10 px-2.5 py-1 rounded">
+                    <span className="text-[11px] font-mono font-bold text-[#e7caa5] bg-white/10 backdrop-blur-sm px-2.5 py-1 rounded border border-white/10">
                       {t.clientType} {t.clientCode}
                     </span>
                     <div className="flex gap-0.5">
@@ -129,19 +154,19 @@ export const TestimonialsFaq: React.FC = () => {
 
                   <Quote className="w-5 h-5 text-[#C5A880]" />
 
-                  <p className="text-sm text-stone-700 leading-relaxed italic">
+                  <p className="text-sm text-white/90 leading-relaxed italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                </div>
 
-                <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
-                  <div>
-                    <h4 className="text-sm font-serif font-bold text-stone-900">
-                      {t.clientName}
-                    </h4>
-                    <div className="flex items-center gap-1 text-[11px] text-stone-500 font-mono mt-0.5">
-                      <MapPin className="w-3 h-3 text-[#B89366]" />
-                      <span>{t.location}</span>
+                  <div className="pt-4 border-t border-white/15 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-sm font-serif font-bold text-white">
+                        {t.clientName}
+                      </h4>
+                      <div className="flex items-center gap-1 text-[11px] text-white/60 font-mono mt-0.5">
+                        <MapPin className="w-3 h-3 text-[#B89366]" />
+                        <span>{t.location}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -151,20 +176,35 @@ export const TestimonialsFaq: React.FC = () => {
         </div>
 
         {/* Frequently Asked Questions matching buildstorys.com 6 FAQs */}
-        <div className="space-y-8 max-w-4xl mx-auto">
-          <div className="text-center space-y-2">
-            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#B89366]">
-              Frequently Asked Questions
-            </span>
-            <h3 className="font-serif text-3xl font-bold text-stone-900">
-              Clear Answers Before You Begin
-            </h3>
-            <p className="text-stone-600 text-xs sm:text-sm">
-              Explore key details about our architecture, interior design, 3D visualization and turnkey execution.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#B89366]">
+                Frequently Asked Questions
+              </span>
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+                Clear Answers Before You Begin
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                Explore key details about our architecture, interior design, 3D visualization and turnkey execution.
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-4/5 hidden lg:block">
+              <img
+                src="https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?auto=format&fit=crop&w=1200&q=90"
+                alt="Architect reviewing construction drawings on site"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(10,11,11,.85)_100%)]" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <div className="font-serif text-2xl italic">15+ years, 250+ handovers.</div>
+                <div className="text-[11px] uppercase tracking-[.2em] text-white/70 mt-1">Ask us anything before you sign.</div>
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-3">
+          <div className="lg:col-span-7 space-y-3">
             {FAQ_DATA.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (

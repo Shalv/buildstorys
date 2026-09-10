@@ -6,7 +6,22 @@ export const ClientAssociations: React.FC = () => {
   return (
     <section id="associations" className="py-20 lg:py-24 bg-white text-stone-900 border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
-        
+
+        {/* Panoramic trust banner */}
+        <div className="relative rounded-lg overflow-hidden h-64 sm:h-80">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=90"
+            alt="Bengaluru residential skyline where Build Storys has delivered projects"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,11,11,.15)_0%,rgba(10,11,11,.35)_45%,rgba(10,11,11,.92)_100%)]" />
+          <div className="relative z-10 h-full flex flex-col justify-end p-6 sm:p-10 text-white">
+            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#e7caa5]">Where we've built</span>
+            <h3 className="font-serif text-3xl sm:text-4xl mt-1">Across Bengaluru's most recognized addresses.</h3>
+          </div>
+        </div>
+
         {/* Header matching buildstorys.com */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-stone-200 pb-8">
           <div className="space-y-3 max-w-2xl">

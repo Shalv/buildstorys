@@ -73,7 +73,27 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenConsultati
         </div>
 
         {/* Active Step Detailed Showcase Card */}
-        <div className="rounded-lg bg-white border border-stone-200 p-6 sm:p-10 shadow-xs space-y-8">
+        <div className="rounded-lg bg-white border border-stone-200 overflow-hidden shadow-xs">
+          <div className="relative h-56 sm:h-72 overflow-hidden">
+            {currentStep.image && (
+              <img
+                key={currentStep.stepCode}
+                src={currentStep.image}
+                alt={`${currentStep.title} phase of the Build Storys process`}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover chapter-reveal"
+              />
+            )}
+            <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,11,11,.88)_0%,rgba(10,11,11,.15)_60%,transparent_100%)]" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
+              <div className="font-serif text-4xl sm:text-6xl text-white/25">{currentStep.stepCode}</div>
+              <span className="text-[11px] font-mono uppercase tracking-[.2em] text-white/80 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded border border-white/15">
+                {currentStep.duration}
+              </span>
+            </div>
+          </div>
+
+          <div className="p-6 sm:p-10 space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* Left Col: Step Definition */}
@@ -172,6 +192,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenConsultati
             >
               Next Step &rarr;
             </button>
+          </div>
           </div>
         </div>
 
