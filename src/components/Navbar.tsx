@@ -141,7 +141,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <img
               src="/images/build-storys-logo.webp"
               alt="Build Storys — Crafting Spaces, Building Stories"
-              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12 sm:h-13' : 'h-12 sm:h-14'}`}
+              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-18 sm:h-19' : 'h-18 sm:h-19'}`}
             />
           </button>
 
