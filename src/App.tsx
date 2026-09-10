@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
@@ -18,34 +18,17 @@ import { Project, COMPANY_PROFILE } from './data/websiteData';
 import { MessageSquare, PhoneCall, Sparkles } from 'lucide-react';
 
 export default function App() {
-  // Read initial route from URL hash (e.g., #/services/architecture or #about)
-  const getInitialRoute = () => {
-    const hash = window.location.hash.replace(/^#\/?/, '');
-    return hash || 'home';
-  };
-
-  const [currentRoute, setCurrentRoute] = useState<string>(getInitialRoute);
+  // Route is tracked purely in memory now — the URL bar is never touched,
+  // so no #/route ever appears and refreshing always returns to Home.
+  const [currentRoute, setCurrentRoute] = useState<string>('home');
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [prefilledService, setPrefilledService] = useState<string>('');
   const [prefilledProject, setPrefilledProject] = useState<string>('');
   const [prefilledScope, setPrefilledScope] = useState<{ area?: string; budget?: string }>({});
 
-  // Sync route on browser back/forward actions
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace(/^#\/?/, '') || 'home';
-      setCurrentRoute(hash);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
   const handleNavigate = (route: string) => {
     setCurrentRoute(route);
-    window.location.hash = `#/${route}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
