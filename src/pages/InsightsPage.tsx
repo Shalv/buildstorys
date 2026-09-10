@@ -13,7 +13,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = ({ onOpenConsultation, 
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-architectural-model-and-plans-41314-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/15799/15799-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2400&q=90"
         badge="// RESEARCH & FIELD ESSAYS"

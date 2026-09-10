@@ -13,7 +13,7 @@ export const AssociationsPage: React.FC<AssociationsPageProps> = ({ onOpenConsul
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-office-building-in-a-city-41310-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/4648/4648-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=90"
         badge="// RECOGNITION & COMMUNITIES"

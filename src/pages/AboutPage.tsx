@@ -26,7 +26,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation, onNavi
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-architectural-plans-and-models-on-a-table-41308-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/21226/21226-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90"
         badge="// STUDIO PROFILE & ETHOS"

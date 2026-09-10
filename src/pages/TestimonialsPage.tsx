@@ -22,7 +22,7 @@ export const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onOpenConsul
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-bright-and-modern-living-room-interior-41584-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/4196/4196-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=90"
         badge="// CLIENT ENDORSEMENTS & CLARITY"

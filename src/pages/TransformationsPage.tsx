@@ -16,7 +16,7 @@ export const TransformationsPage: React.FC<TransformationsPageProps> = ({ onOpen
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-architect-working-at-his-desk-in-an-office-41305-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/1459/1459-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90"
         badge="// SPATIAL METAMORPHOSIS"

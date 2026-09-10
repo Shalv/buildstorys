@@ -31,7 +31,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-office-building-in-a-city-41310-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/23721/23721-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=90"
         badge="// STUDIO PRESENCE // BENGALURU"

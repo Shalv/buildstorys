@@ -13,7 +13,7 @@ export const EstimatorPage: React.FC<EstimatorPageProps> = ({ onApplyEstimate, o
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-architect-drawing-on-a-blueprint-41309-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/1439/1439-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f8?auto=format&fit=crop&w=2400&q=90"
         badge="// PRELIMINARY PLANNING & BUDGETING"

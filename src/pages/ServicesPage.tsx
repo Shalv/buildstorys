@@ -43,35 +43,35 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
   // Video backgrounds tailored specifically to each discipline
   const videoConfig: Record<string, { video: string; poster: string; title: string; italic: string; desc: string }> = {
     'Architecture': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-facade-with-geometric-lines-41312-large.mp4',
+      video: 'https://assets.mixkit.co/videos/27543/27543-360.mp4',
       poster: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90',
       title: 'Architectural Design & Planning',
       italic: 'Bioclimatic living, structural clarity & timeless facades.',
       desc: 'From custom residential villas and multi-family sanctuaries to commercial headquarters and industrial complexes, our architectural studio designs buildings responding to Bangalore’s sun, wind, and urban microclimates.'
     },
     'Interior Design': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-bright-and-modern-living-room-interior-41584-large.mp4',
+      video: 'https://assets.mixkit.co/videos/39177/39177-360.mp4',
       poster: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2400&q=90',
       title: 'Bespoke Luxury Interiors',
       italic: 'Material tactility, artisanal millwork & ambient illumination.',
       desc: 'Crafting spatial narratives for luxury penthouses, duplex villas, and high-performance workspaces. We hand-select Italian marbles, custom teak woodwork, architectural lighting, and acoustic linings.'
     },
     'Turnkey': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-architect-drawing-blueprints-with-a-ruler-41306-large.mp4',
+      video: 'https://assets.mixkit.co/videos/16556/16556-360.mp4',
       poster: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f8?auto=format&fit=crop&w=2400&q=90',
       title: 'Turnkey Design-Build Handover',
       italic: 'Single-source responsibility from concept sketch to keys in hand.',
       desc: 'We eliminate contractor friction with a unified contract, transparent itemized BOQ, strict material benchmarking, and rigorous on-site quality engineering across Karnataka.'
     },
     'Visualisation': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-futuristic-architectural-digital-rendering-41315-large.mp4',
+      video: 'https://assets.mixkit.co/videos/15840/15840-360.mp4',
       poster: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2400&q=90',
       title: '3D Visualisation & BIM Simulation',
       italic: 'Experience the unbuilt world with photorealistic CGI & virtual reality.',
       desc: 'Before breaking ground, visualize every lighting angle, shadow depth, material transition, and MEP clash through advanced BIM models and cinematic digital walkthroughs.'
     },
     'All': {
-      video: '/video/architecture-hero.mp4',
+      video: 'https://assets.mixkit.co/videos/4170/4170-360.mp4',
       poster: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2400&q=90',
       title: 'Disciplines & Execution Services',
       italic: 'Integrated expertise across architecture, interiors, and turnkey delivery.',

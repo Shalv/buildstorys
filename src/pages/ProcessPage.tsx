@@ -26,7 +26,7 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenConsultation, on
     <div className="space-y-16 pb-20">
       {/* 1. Cinematic Video Hero Banner */}
       <VideoHeroBanner
-        videoSrc="https://assets.mixkit.co/videos/preview/mixkit-measuring-a-blueprint-in-an-architects-studio-41307-large.mp4"
+        videoSrc="https://assets.mixkit.co/videos/36893/36893-360.mp4"
         fallbackVideoSrc="/video/architecture-hero.mp4"
         poster="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2400&q=90"
         badge="// METHODOLOGY & LIFECYCLE"

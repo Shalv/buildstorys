@@ -53,35 +53,35 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
   // Video backgrounds for project categories
   const videoConfig: Record<string, { video: string; poster: string; title: string; italic: string; desc: string }> = {
     'Architecture': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-facade-with-geometric-lines-41312-large.mp4',
+      video: 'https://assets.mixkit.co/videos/4854/4854-360.mp4',
       poster: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90',
       title: 'Architectural Landmarks & Villas',
       italic: 'Sculptural forms, cantilevered volumes, and bioclimatic courtyards.',
       desc: 'Selected private villas, luxury multi-generation residences, and contemporary bungalows designed and executed across North and South Bengaluru.'
     },
     'Interior Design': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-bright-and-modern-living-room-interior-41584-large.mp4',
+      video: 'https://assets.mixkit.co/videos/4046/4046-360.mp4',
       poster: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=90',
       title: 'Luxury Residential Interior Portfolio',
       italic: 'Curated Italian marbles, concealed joinery, and tailored lighting.',
       desc: 'From high-end residences at Phoenix Kessaku and Sobha City to bespoke penthouses, explore how we transform bare shells into sensory sanctuaries.'
     },
     'Commercial & Retail': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-modern-glass-office-building-in-a-city-41310-large.mp4',
+      video: 'https://assets.mixkit.co/videos/4339/4339-360.mp4',
       poster: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=90',
       title: 'Commercial & Retail Architecture',
       italic: 'High-performance workspaces, boutique retail, and hospitality environments.',
       desc: 'Workspaces engineered for productivity, brand identity, and long-term acoustic and visual comfort in Bangalore’s prime commercial corridors.'
     },
     'Industrial': {
-      video: 'https://assets.mixkit.co/videos/preview/mixkit-futuristic-architectural-digital-rendering-41315-large.mp4',
+      video: 'https://assets.mixkit.co/videos/30431/30431-360.mp4',
       poster: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=90',
       title: 'Industrial & High-Tech Facilities',
       italic: 'Rigorous engineering, structural steel, and turnkey logistical efficiency.',
       desc: 'Precision industrial campuses such as Texel Industries, featuring PEB structures, clean-span floors, and integrated administrative wings.'
     },
     'All': {
-      video: '/video/architecture-hero.mp4',
+      video: 'https://assets.mixkit.co/pmh3ird448ok9qq7108ddcrk1uqc',
       poster: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2400&q=95',
       title: 'Spaces With Meaning',
       italic: 'Curated architectural & interior portfolio spanning 250+ delivered spaces.',
