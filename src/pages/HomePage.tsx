@@ -48,6 +48,13 @@ export const HomePage: React.FC<HomePageProps> = ({
         onOpenConsultation={onOpenConsultation}
         onExploreProjects={() => onNavigate('projects')}
         onExploreProcess={() => onNavigate('process')}
+        onSelectDiscipline={(disc) => {
+          if (disc === 'styling') {
+            onNavigate('services/interiors');
+          } else {
+            onNavigate(`services/${disc}`);
+          }
+        }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-24">

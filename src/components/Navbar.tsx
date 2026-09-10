@@ -127,8 +127,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Main architectural navbar */}
       <div className={`transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-stone-200/80 py-3' 
-          : 'bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-stone-200/60 py-3.5'
+          ? 'bg-[#0B0D10]/95 backdrop-blur-md shadow-lg border-b border-stone-800/80 py-2.5 sm:py-3' 
+          : 'bg-[#0E1114]/95 backdrop-blur-sm border-b border-stone-800/60 py-3 sm:py-3.5'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-6">
           
@@ -136,24 +136,25 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button 
             id="nav-logo-btn"
             onClick={() => handleNavClick('home')}
-            className="flex items-center text-left group focus:outline-none shrink-0"
+            className="flex items-center text-left group focus:outline-none shrink-0 cursor-pointer"
+            title="Build Storys — Crafting Spaces | Building Stories"
           >
             <img
               src="/images/build-storys-logo.webp"
-              alt="Build Storys — Crafting Spaces, Building Stories"
-              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-18 sm:h-19' : 'h-18 sm:h-19'}`}
+              alt="Build Storys — Crafting Spaces | Building Stories"
+              className="h-10 sm:h-12 lg:h-13.5 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-sm font-medium text-stone-700">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-sm font-medium text-stone-300">
             <button 
               id="nav-link-home"
               onClick={() => handleNavClick('home')}
-              className={`hover:text-stone-950 transition-colors py-1 ${
+              className={`hover:text-white transition-colors py-1 ${
                 activeSection === 'home' 
-                  ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                  : 'text-stone-600'
+                  ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                  : 'text-stone-300'
               }`}
             >
               Home
@@ -162,10 +163,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button 
               id="nav-link-about"
               onClick={() => handleNavClick('about')}
-              className={`hover:text-stone-950 transition-colors py-1 ${
+              className={`hover:text-white transition-colors py-1 ${
                 activeSection === 'about' 
-                  ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                  : 'text-stone-600'
+                  ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                  : 'text-stone-300'
               }`}
             >
               About
@@ -181,10 +182,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button 
                 id="nav-services-dropdown-toggle"
                 onClick={() => handleNavClick('services')}
-                className={`flex items-center gap-1 hover:text-stone-950 transition-colors py-1 ${
+                className={`flex items-center gap-1 hover:text-white transition-colors py-1 ${
                   isServicesActive
-                    ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                    : 'text-stone-600'
+                    ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                    : 'text-stone-300'
                 }`}
               >
                 <span>Services</span>
@@ -192,14 +193,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
 
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-xl border border-stone-200 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
-                  <div className="px-3.5 py-1.5 border-b border-stone-100 flex items-center justify-between">
+                <div className="absolute top-full left-0 mt-1 w-72 bg-[#12151B] rounded-xl shadow-2xl border border-stone-800 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
+                  <div className="px-3.5 py-1.5 border-b border-stone-800/80 flex items-center justify-between">
                     <p className="text-[10px] font-mono font-semibold uppercase tracking-wider text-stone-400">
                       Disciplines &amp; Sub-Pages
                     </p>
                     <button
                       onClick={() => handleNavClick('services')}
-                      className="text-[10px] font-mono text-[#B89366] hover:underline"
+                      className="text-[10px] font-mono text-[#C5A880] hover:underline"
                     >
                       View All (9) &rarr;
                     </button>
@@ -207,46 +208,46 @@ export const Navbar: React.FC<NavbarProps> = ({
                   
                   <button 
                     onClick={() => handleNavClick('services/architecture')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Architecture &amp; Sanctions</div>
-                      <div className="text-[11px] text-stone-500">Residential Villas, Commercial &amp; Sanctions</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Architecture &amp; Sanctions</div>
+                      <div className="text-[11px] text-stone-400">Residential Villas, Commercial &amp; Sanctions</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('services/interiors')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Bespoke Luxury Interiors</div>
-                      <div className="text-[11px] text-stone-500">Italian Marble, Teak Millwork &amp; Lighting</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Bespoke Luxury Interiors</div>
+                      <div className="text-[11px] text-stone-400">Italian Marble, Teak Millwork &amp; Lighting</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('services/turnkey')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Turnkey Solutions</div>
-                      <div className="text-[11px] text-stone-500">Single-Source Locked BOQ Handover</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Turnkey Solutions</div>
+                      <div className="text-[11px] text-stone-400">Single-Source Locked BOQ Handover</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('services/visualisation')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">3D Visualisation &amp; BIM</div>
-                      <div className="text-[11px] text-stone-500">Photorealistic CGI &amp; VR Walkthroughs</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">3D Visualisation &amp; BIM</div>
+                      <div className="text-[11px] text-stone-400">Photorealistic CGI &amp; VR Walkthroughs</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
                 </div>
               )}
@@ -273,14 +274,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
 
               {projectsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-xl border border-stone-200 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
-                  <div className="px-3.5 py-1.5 border-b border-stone-100 flex items-center justify-between">
+                <div className="absolute top-full left-0 mt-1 w-72 bg-[#12151B] rounded-xl shadow-2xl border border-stone-800 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
+                  <div className="px-3.5 py-1.5 border-b border-stone-800/80 flex items-center justify-between">
                     <p className="text-[10px] font-mono font-semibold uppercase tracking-wider text-stone-400">
                       Portfolio Sectors
                     </p>
                     <button
                       onClick={() => handleNavClick('projects')}
-                      className="text-[10px] font-mono text-[#B89366] hover:underline"
+                      className="text-[10px] font-mono text-[#C5A880] hover:underline"
                     >
                       All Projects (250+) &rarr;
                     </button>
@@ -288,46 +289,46 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                   <button 
                     onClick={() => handleNavClick('projects/architecture')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Architecture &amp; Villas</div>
-                      <div className="text-[11px] text-stone-500">Bioclimatic Private Residences</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Architecture &amp; Villas</div>
+                      <div className="text-[11px] text-stone-400">Bioclimatic Private Residences</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('projects/interiors')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Luxury Interiors</div>
-                      <div className="text-[11px] text-stone-500">Phoenix Kessaku, Sobha City, Prestige</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Luxury Interiors</div>
+                      <div className="text-[11px] text-stone-400">Phoenix Kessaku, Sobha City, Prestige</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('projects/commercial')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Commercial &amp; Retail</div>
-                      <div className="text-[11px] text-stone-500">Executive Headquarters &amp; Flagships</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Commercial &amp; Retail</div>
+                      <div className="text-[11px] text-stone-400">Executive Headquarters &amp; Flagships</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('projects/industrial')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] hover:text-stone-950 flex items-center justify-between group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center justify-between group"
                   >
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Industrial Facilities</div>
-                      <div className="text-[11px] text-stone-500">PEB Manufacturing Campuses</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Industrial Facilities</div>
+                      <div className="text-[11px] text-stone-400">PEB Manufacturing Campuses</div>
                     </div>
-                    <ArrowRight className="w-3 h-3 text-stone-300 group-hover:text-[#B89366] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-stone-500 group-hover:text-[#C5A880] transition-colors" />
                   </button>
                 </div>
               )}
@@ -337,10 +338,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button 
               id="nav-link-process"
               onClick={() => handleNavClick('process')}
-              className={`hover:text-stone-950 transition-colors py-1 ${
+              className={`hover:text-white transition-colors py-1 ${
                 activeSection === 'process' 
-                  ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                  : 'text-stone-600'
+                  ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                  : 'text-stone-300'
               }`}
             >
               Process
@@ -349,10 +350,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button 
               id="nav-link-transformations"
               onClick={() => handleNavClick('transformations')}
-              className={`hover:text-stone-950 transition-colors py-1 ${
+              className={`hover:text-white transition-colors py-1 ${
                 activeSection === 'transformations' 
-                  ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                  : 'text-stone-600'
+                  ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                  : 'text-stone-300'
               }`}
             >
               Transformations
@@ -367,10 +368,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <button 
                 id="nav-more-dropdown-toggle"
-                className={`flex items-center gap-1 hover:text-stone-950 transition-colors py-1 ${
+                className={`flex items-center gap-1 hover:text-white transition-colors py-1 ${
                   ['estimator', 'associations', 'testimonials', 'insights'].includes(activeSection)
-                    ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                    : 'text-stone-600'
+                    ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                    : 'text-stone-300'
                 }`}
               >
                 <span>More</span>
@@ -378,48 +379,48 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
 
               {moreDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-stone-200 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
+                <div className="absolute top-full left-0 mt-1 w-64 bg-[#12151B] rounded-xl shadow-2xl border border-stone-800 py-2 animate-in fade-in-50 zoom-in-95 duration-150 z-50">
                   <button 
                     onClick={() => handleNavClick('estimator')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] flex items-center gap-2.5 group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center gap-2.5 group"
                   >
-                    <Calculator className="w-4 h-4 text-[#B89366]" />
+                    <Calculator className="w-4 h-4 text-[#C5A880]" />
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Cost Estimator</div>
-                      <div className="text-[11px] text-stone-500">Live Bangalore budget calculator</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Cost Estimator</div>
+                      <div className="text-[11px] text-stone-400">Live Bangalore budget calculator</div>
                     </div>
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('associations')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] flex items-center gap-2.5 group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center gap-2.5 group"
                   >
-                    <Building2 className="w-4 h-4 text-[#B89366]" />
+                    <Building2 className="w-4 h-4 text-[#C5A880]" />
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Client Associations</div>
-                      <div className="text-[11px] text-stone-500">Gated communities &amp; brands</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Client Associations</div>
+                      <div className="text-[11px] text-stone-400">Gated communities &amp; brands</div>
                     </div>
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('testimonials')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] flex items-center gap-2.5 group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center gap-2.5 group"
                   >
-                    <HelpCircle className="w-4 h-4 text-[#B89366]" />
+                    <HelpCircle className="w-4 h-4 text-[#C5A880]" />
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Testimonials &amp; FAQ</div>
-                      <div className="text-[11px] text-stone-500">Verified reviews &amp; legal clarity</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Testimonials &amp; FAQ</div>
+                      <div className="text-[11px] text-stone-400">Verified reviews &amp; legal clarity</div>
                     </div>
                   </button>
 
                   <button 
                     onClick={() => handleNavClick('insights')}
-                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-700 hover:bg-[#FAF8F5] flex items-center gap-2.5 group"
+                    className="w-full text-left px-3.5 py-2.5 text-xs text-stone-300 hover:bg-[#1A1E26] hover:text-[#E7CAA5] flex items-center gap-2.5 group"
                   >
-                    <BookOpen className="w-4 h-4 text-[#B89366]" />
+                    <BookOpen className="w-4 h-4 text-[#C5A880]" />
                     <div>
-                      <div className="font-semibold text-stone-900 group-hover:text-[#B89366]">Insights &amp; Blog</div>
-                      <div className="text-[11px] text-stone-500">Architectural research essays</div>
+                      <div className="font-semibold text-white group-hover:text-[#E7CAA5]">Insights &amp; Blog</div>
+                      <div className="text-[11px] text-stone-400">Architectural research essays</div>
                     </div>
                   </button>
                 </div>
@@ -429,10 +430,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button 
               id="nav-link-contact"
               onClick={() => handleNavClick('contact')}
-              className={`hover:text-stone-950 transition-colors py-1 ${
+              className={`hover:text-white transition-colors py-1 ${
                 activeSection === 'contact' 
-                  ? 'text-stone-950 font-semibold border-b-2 border-[#C5A880]' 
-                  : 'text-stone-600'
+                  ? 'text-[#E7CAA5] font-semibold border-b-2 border-[#C5A880]' 
+                  : 'text-stone-300'
               }`}
             >
               Contact
@@ -444,10 +445,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               id="nav-consultation-btn"
               onClick={onOpenConsultation}
-              className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-[#14171B] hover:bg-[#252930] active:scale-95 rounded transition-all duration-200 shadow-xs border border-[#2A2E35] group"
+              className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-bold uppercase tracking-wider text-stone-900 bg-[#FAF8F5] hover:bg-white active:scale-95 rounded-full transition-all duration-200 shadow-sm border border-stone-300 hover:border-[#C5A880] group cursor-pointer"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#C5A880] group-hover:scale-110 transition-transform" />
-              <span>Book Consultation</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#B89366] group-hover:scale-110 transition-transform" />
+              <span className="font-sans">Book Consultation</span>
             </button>
 
             {/* Mobile Hamburger Toggle Button */}
@@ -465,22 +466,22 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer with Subheadings */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[88px] bg-white border-b border-stone-200 shadow-2xl max-h-[85vh] overflow-y-auto px-5 py-5 space-y-4 animate-in slide-in-from-top-2 duration-200 z-50">
-          <div className="space-y-1 divide-y divide-stone-100 text-sm font-medium">
+        <div className="lg:hidden fixed inset-x-0 top-[88px] bg-[#0E1116] border-b border-stone-800 shadow-2xl max-h-[85vh] overflow-y-auto px-5 py-5 space-y-4 animate-in slide-in-from-top-2 duration-200 z-50">
+          <div className="space-y-1 divide-y divide-stone-800/80 text-sm font-medium">
             <button
               onClick={() => handleNavClick('home')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Home</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('about')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>About Studio &amp; Ethos</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             {/* Services with collapsible subheadings in mobile */}
@@ -488,13 +489,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-center justify-between">
                 <button
                   onClick={() => handleNavClick('services')}
-                  className="text-stone-900 font-semibold text-sm"
+                  className="text-white font-semibold text-sm"
                 >
                   Services (Overview)
                 </button>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                  className="p-1 text-stone-500 hover:text-stone-900"
+                  className="p-1 text-stone-400 hover:text-white"
                   aria-label="Toggle services subheadings"
                 >
                   <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -502,17 +503,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
 
               {mobileServicesOpen && (
-                <div className="mt-2 pl-3 border-l-2 border-[#C5A880] space-y-2 text-xs font-mono text-stone-600">
-                  <button onClick={() => handleNavClick('services/architecture')} className="block py-1 hover:text-[#B89366]">
+                <div className="mt-2 pl-3 border-l-2 border-[#C5A880] space-y-2 text-xs font-mono text-stone-300">
+                  <button onClick={() => handleNavClick('services/architecture')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Architecture &amp; Sanctions
                   </button>
-                  <button onClick={() => handleNavClick('services/interiors')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('services/interiors')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Bespoke Luxury Interiors
                   </button>
-                  <button onClick={() => handleNavClick('services/turnkey')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('services/turnkey')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Turnkey Solutions
                   </button>
-                  <button onClick={() => handleNavClick('services/visualisation')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('services/visualisation')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; 3D Visualisation &amp; BIM
                   </button>
                 </div>
@@ -524,13 +525,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-center justify-between">
                 <button
                   onClick={() => handleNavClick('projects')}
-                  className="text-stone-900 font-semibold text-sm"
+                  className="text-white font-semibold text-sm"
                 >
                   Projects (Overview)
                 </button>
                 <button
                   onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
-                  className="p-1 text-stone-500 hover:text-stone-900"
+                  className="p-1 text-stone-400 hover:text-white"
                   aria-label="Toggle projects subheadings"
                 >
                   <ChevronDown className={`w-4 h-4 transition-transform ${mobileProjectsOpen ? 'rotate-180' : ''}`} />
@@ -538,17 +539,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
 
               {mobileProjectsOpen && (
-                <div className="mt-2 pl-3 border-l-2 border-[#C5A880] space-y-2 text-xs font-mono text-stone-600">
-                  <button onClick={() => handleNavClick('projects/architecture')} className="block py-1 hover:text-[#B89366]">
+                <div className="mt-2 pl-3 border-l-2 border-[#C5A880] space-y-2 text-xs font-mono text-stone-300">
+                  <button onClick={() => handleNavClick('projects/architecture')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Architecture &amp; Villas
                   </button>
-                  <button onClick={() => handleNavClick('projects/interiors')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('projects/interiors')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Luxury Interiors
                   </button>
-                  <button onClick={() => handleNavClick('projects/commercial')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('projects/commercial')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Commercial &amp; Retail
                   </button>
-                  <button onClick={() => handleNavClick('projects/industrial')} className="block py-1 hover:text-[#B89366]">
+                  <button onClick={() => handleNavClick('projects/industrial')} className="block py-1 hover:text-[#E7CAA5]">
                     &bull; Industrial Facilities
                   </button>
                 </div>
@@ -557,75 +558,75 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => handleNavClick('process')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>The Build Storys Way (7 Steps)</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('transformations')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Before &amp; After Transformations</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('estimator')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Cost &amp; Timeline Estimator</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('associations')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Client &amp; Brand Associations</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('testimonials')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Client Notes &amp; FAQs</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('insights')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Design Insights &amp; Journal</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
 
             <button
               onClick={() => handleNavClick('contact')}
-              className="w-full text-left py-2.5 text-stone-900 flex items-center justify-between"
+              className="w-full text-left py-2.5 text-stone-200 hover:text-white flex items-center justify-between"
             >
               <span>Contact &amp; Studio Location</span>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-500" />
             </button>
           </div>
 
-          <div className="pt-3 border-t border-stone-200 space-y-3">
+          <div className="pt-3 border-t border-stone-800 space-y-3">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-[#14171B] rounded text-center flex items-center justify-center gap-2"
+              className="w-full py-3 text-xs font-bold uppercase tracking-wider text-stone-900 bg-[#FAF8F5] hover:bg-white rounded-full text-center flex items-center justify-center gap-2 shadow-md transition-colors"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#C5A880]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B89366]" />
               Book Consultation
             </button>
-            <div className="flex justify-between items-center text-xs text-stone-500 pt-1">
+            <div className="flex justify-between items-center text-xs text-stone-400 pt-1">
               <span>Sahakar Nagar, Bengaluru</span>
-              <a href="tel:+916366778876" className="text-[#B89366] font-mono font-medium">+91 63667 78876</a>
+              <a href="tel:+916366778876" className="text-[#C5A880] font-mono font-medium">+91 63667 78876</a>
             </div>
           </div>
         </div>

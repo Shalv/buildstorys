@@ -21,11 +21,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
           
           {/* Col 1: Brand & Positioning */}
           <div className="lg:col-span-2 space-y-4">
-            <img
-              src="/images/build-storys-logo.webp"
-              alt="Build Storys — Crafting Spaces, Building Stories"
-              className="h-14 w-auto"
-            />
+            <button
+              onClick={() => onNavigate('home')}
+              className="text-left focus:outline-none cursor-pointer inline-block group"
+              title="Build Storys — Crafting Spaces | Building Stories"
+            >
+              <img
+                src="/images/build-storys-logo.webp"
+                alt="Build Storys — Crafting Spaces | Building Stories"
+                className="h-14 sm:h-16 lg:h-18 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+            </button>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
               Integrated architecture, interior design, planning, craftsmanship and turnkey execution in Bengaluru.

@@ -1,6 +1,6 @@
 {
   "name": "Build Storys",
-  "description": "Build Storys Infrastructure Pvt Ltd — Integrated architecture, interior design and turnkey design-build company based in Bengaluru.",
+  "description": "Build Storys — Architecture & Interiors",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
