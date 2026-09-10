@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Phone, Mail, MapPin, ArrowUp, Sparkles, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, Sparkles, ExternalLink } from 'lucide-react';
 import { COMPANY_PROFILE } from '../data/websiteData';
 
 interface FooterProps {
@@ -21,19 +21,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
           
           {/* Col 1: Brand & Positioning */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded bg-[#1A1E24] flex items-center justify-center text-[#C5A880] border border-stone-800">
-                <Compass className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-serif text-lg font-bold text-white tracking-wider block">
-                  BUILD STORYS
-                </span>
-                <span className="text-[10px] font-mono tracking-widest text-stone-500 uppercase block">
-                  {COMPANY_PROFILE.legalName}
-                </span>
-              </div>
-            </div>
+            <img
+              src="/images/build-storys-logo.webp"
+              alt="Build Storys — Crafting Spaces, Building Stories"
+              className="h-14 w-auto"
+            />
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
               Integrated architecture, interior design, planning, craftsmanship and turnkey execution in Bengaluru.

@@ -8,7 +8,6 @@ import {
   ChevronDown, 
   ArrowRight,
   Sparkles,
-  Compass,
   Building2,
   Layers,
   HelpCircle,
@@ -137,21 +136,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button 
             id="nav-logo-btn"
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 text-left group focus:outline-none shrink-0"
+            className="flex items-center text-left group focus:outline-none shrink-0"
           >
-            <div className="w-9 h-9 rounded bg-[#14171B] flex items-center justify-center text-[#C5A880] border border-[#2A2E35] group-hover:border-[#C5A880] transition-colors shadow-xs">
-              <Compass className="w-4 h-4 transition-transform group-hover:rotate-45 duration-500" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-serif tracking-widest text-lg sm:text-xl font-bold text-stone-900 uppercase leading-none">
-                  BUILD STORYS
-                </span>
-              </div>
-              <p className="text-[9px] tracking-widest text-stone-500 uppercase font-mono mt-0.5">
-                INFRASTRUCTURE &bull; BENGALURU
-              </p>
-            </div>
+            <img
+              src="/images/build-storys-logo.webp"
+              alt="Build Storys — Crafting Spaces, Building Stories"
+              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-9 sm:h-10' : 'h-10 sm:h-12'}`}
+            />
           </button>
 
           {/* Desktop Navigation Links */}
