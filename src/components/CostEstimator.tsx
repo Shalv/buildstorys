@@ -149,39 +149,39 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
 
             </div>
 
-            {/* Right Col: Calculation Output Box */}
-            <div className="lg:col-span-5 bg-[#1A1E24] text-white p-7 rounded-xl border border-stone-800 space-y-6 shadow-xl">
+            {/* Right Col: Calculation Output Box (Light Luxury) */}
+            <div className="lg:col-span-5 bg-[#FAF8F5] text-stone-900 p-7 sm:p-8 rounded-2xl border border-[#E7E5E0] space-y-6 shadow-sm">
               <div className="space-y-1">
-                <span className="text-[11px] font-mono text-[#C5A880] uppercase tracking-wider">
+                <span className="text-[11px] font-mono text-[#9A7049] uppercase tracking-wider font-bold">
                   Estimated Investment Range
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-white">
+                <div className="font-serif text-3xl sm:text-4xl font-normal text-[#1C1917]">
                   {formatCostINR(totalCost)}
                 </div>
-                <div className="text-[11px] text-stone-400 font-mono">
+                <div className="text-[11px] text-stone-500 font-mono">
                   ~₹{ratePerSqFt.toLocaleString()} / sq. ft. all-inclusive estimate
                 </div>
               </div>
 
-              <div className="space-y-3 pt-3 border-t border-stone-800 text-xs">
-                <div className="flex items-center justify-between text-stone-300">
+              <div className="space-y-3 pt-3 border-t border-[#E7E5E0] text-xs">
+                <div className="flex items-center justify-between text-stone-600">
                   <span className="flex items-center gap-1.5 font-mono">
-                    <Clock className="w-3.5 h-3.5 text-[#C5A880]" />
+                    <Clock className="w-3.5 h-3.5 text-[#9A7049]" />
                     Estimated Timeline:
                   </span>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-stone-900 font-mono">
                     ~{currentRates.timelineWeeks} - {currentRates.timelineWeeks + 4} Weeks
                   </span>
                 </div>
 
-                <div className="flex items-center justify-between text-stone-300">
+                <div className="flex items-center justify-between text-stone-600">
                   <span className="font-mono">Accountability Model:</span>
-                  <span className="text-emerald-400 font-medium">100% Turnkey Delivery</span>
+                  <span className="text-emerald-700 font-bold font-mono">100% Turnkey Delivery</span>
                 </div>
 
-                <div className="flex items-center justify-between text-stone-300">
+                <div className="flex items-center justify-between text-stone-600">
                   <span className="font-mono">Bill of Quantities:</span>
-                  <span className="text-stone-300">Locked Price Guarantee</span>
+                  <span className="text-stone-800 font-semibold font-mono">Locked Price Guarantee</span>
                 </div>
               </div>
 
@@ -193,15 +193,15 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     area: areaSqFt.toString(),
                     budget: getBudgetCategory(totalCost)
                   })}
-                  className="w-full py-3.5 rounded bg-[#C5A880] hover:bg-[#D8BE9B] text-[#14171B] text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-md"
+                  className="w-full py-3.5 rounded-xl bg-[#1C1917] hover:bg-[#9A7049] text-white text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                 >
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-4 h-4 text-[#C5A880]" />
                   <span>Transfer Estimate to Consultation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
 
-              <p className="text-[10px] text-stone-400 font-mono text-center">
+              <p className="text-[10px] text-stone-500 font-mono text-center">
                 *Subject to site topography, structural drawings, and final material curation.
               </p>
             </div>

@@ -193,15 +193,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
           </div>
 
-          {/* Project Results */}
-          <div className="bg-stone-900 text-white p-6 sm:p-8 rounded-xl border border-stone-800 space-y-4">
-            <h4 className="font-serif text-xl font-bold text-[#D8BE9B]">
-              Project Results & Performance
+          {/* Project Results (Light Luxury) */}
+          <div className="bg-white text-stone-900 p-6 sm:p-8 rounded-2xl border border-[#E7E5E0] space-y-4 shadow-2xs">
+            <h4 className="font-serif text-xl font-normal text-[#1C1917]">
+              Project Results &amp; Performance Highlights
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {project.results.map((res, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-300">
-                  <span className="w-2 h-2 rounded-full bg-[#C5A880] mt-1.5 shrink-0" />
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
+                  <span className="w-2 h-2 rounded-full bg-[#9A7049] mt-1.5 shrink-0" />
                   <span>{res}</span>
                 </div>
               ))}
@@ -212,11 +212,11 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           {project.galleryImages.length > 0 && (
             <div className="space-y-3">
               <h4 className="font-serif text-lg font-bold text-stone-900">
-                Exterior & Interior Gallery
+                Exterior &amp; Interior Gallery
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {project.galleryImages.map((img, i) => (
-                  <div key={i} className="rounded-lg overflow-hidden border border-stone-200 h-52 bg-stone-200 shadow-2xs">
+                  <div key={i} className="rounded-xl overflow-hidden border border-[#E7E5E0] h-52 bg-stone-100 shadow-2xs">
                     <img 
                       src={img} 
                       alt={`${project.name} perspective ${i + 1}`} 
@@ -233,18 +233,18 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           {project.beforeImage && project.afterImage && (
             <div className="space-y-3">
               <h4 className="font-serif text-lg font-bold text-stone-900">
-                Transformation Before & After
+                Transformation Before &amp; After
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <span className="text-xs font-mono uppercase font-bold text-stone-500">Site Before</span>
-                  <div className="rounded-lg overflow-hidden border border-stone-200 h-60 bg-stone-200">
+                  <div className="rounded-xl overflow-hidden border border-[#E7E5E0] h-60 bg-stone-100">
                     <img src={project.beforeImage} alt="Site before" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-xs font-mono uppercase font-bold text-emerald-700">Completed Space</span>
-                  <div className="rounded-lg overflow-hidden border border-emerald-400 h-60 bg-stone-200">
+                  <div className="rounded-xl overflow-hidden border border-emerald-300 h-60 bg-stone-100">
                     <img src={project.afterImage} alt="Completed space" className="w-full h-full object-cover" />
                   </div>
                 </div>
@@ -253,13 +253,13 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           )}
 
           {/* Bottom Consultation CTA */}
-          <div className="pt-6 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl border">
+          <div className="pt-6 border-t border-[#E7E5E0] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border border-[#E7E5E0]">
             <div>
-              <h4 className="font-serif text-lg font-bold text-stone-900">
+              <h4 className="font-serif text-xl font-normal text-[#1C1917]">
                 Inspired by {project.name}?
               </h4>
-              <p className="text-xs text-stone-600">
-                Schedule a consultation with our principal architect to discuss your vision and obtain an initial feasibility estimate.
+              <p className="text-xs text-stone-600 mt-1 font-sans">
+                Schedule a vision session with our principal architect to discuss your plot and obtain an initial feasibility estimate.
               </p>
             </div>
             <button
@@ -267,10 +267,10 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 onClose();
                 onBookConsultationForProject(project.name);
               }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#1A1E24] hover:bg-[#2A2E35] text-white text-xs font-bold uppercase tracking-wider shrink-0 transition-all shadow-md"
+              className="pill-cta-primary group cursor-pointer"
             >
               <span>Book Consultation for this Project</span>
-              <ArrowRight className="w-4 h-4 text-[#C5A880]" />
+              <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 

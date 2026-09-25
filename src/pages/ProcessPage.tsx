@@ -53,16 +53,16 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenConsultation, on
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      <div className="w-full max-w-[92vw] 2xl:max-w-[1780px] mx-auto px-4 sm:px-8 lg:px-12 space-y-16">
         
         {/* 2. Interactive Step Timeline Selector */}
         <section className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-stone-200 pb-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#E5E1D8] pb-4">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest text-[#B89366] uppercase">
+              <span className="text-xs font-mono font-bold tracking-widest text-[#8C6842] uppercase">
                 Sequential Delivery
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-1">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#141312] mt-1">
                 Select a Phase to Review Deliverables &amp; Activities
               </h3>
             </div>
@@ -79,22 +79,22 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenConsultation, on
                 <button
                   key={idx}
                   onClick={() => setSelectedStepIndex(idx)}
-                  className={`p-4 rounded-xl border text-left transition-all duration-300 relative group overflow-hidden ${
+                  className={`p-4 rounded-xl border text-left transition-all duration-300 relative group overflow-hidden cursor-pointer ${
                     isSelected
-                      ? 'bg-[#14171B] text-white border-[#14171B] shadow-lg shadow-[#14171B]/20 scale-102'
-                      : 'bg-white text-stone-700 border-stone-200 hover:border-[#C5A880] hover:bg-stone-50'
+                      ? 'bg-[#141312] text-white border-[#141312] shadow-md shadow-[#141312]/20 scale-102'
+                      : 'bg-white text-stone-700 border-[#E5E1D8] hover:border-[#8C6842] hover:bg-stone-50'
                   }`}
                 >
                   {/* Top corner tick */}
-                  <div className={`text-[10px] font-mono ${isSelected ? 'text-[#C5A880]' : 'text-stone-300'}`}>+</div>
+                  <div className={`text-[10px] font-mono ${isSelected ? 'text-[#8C6842]' : 'text-stone-300'}`}>+</div>
                   
                   <div className="flex items-center justify-between mb-2">
                     <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded ${
-                      isSelected ? 'bg-[#C5A880] text-[#14171B]' : 'bg-stone-100 text-stone-600'
+                      isSelected ? 'bg-[#8C6842] text-white' : 'bg-[#F8F7F4] text-stone-700 border border-[#E5E1D8]'
                     }`}>
                       {step.stepCode}
                     </span>
-                    <ChevronRight className={`w-3.5 h-3.5 transition-transform ${isSelected ? 'text-[#C5A880] translate-x-0.5' : 'text-stone-400 group-hover:translate-x-0.5'}`} />
+                    <ChevronRight className={`w-3.5 h-3.5 transition-transform ${isSelected ? 'text-[#8C6842] translate-x-0.5' : 'text-stone-400 group-hover:translate-x-0.5'}`} />
                   </div>
 
                   <div className="font-serif text-base font-bold leading-tight mt-2">{step.title}</div>
@@ -108,12 +108,12 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenConsultation, on
         </section>
 
         {/* 3. Deep Dive into the Active Selected Phase — Creative Blueprint Card */}
-        <section className="bg-white rounded-2xl border border-stone-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 sm:p-12 relative overflow-hidden">
+        <section className="bg-white rounded-3xl border border-[#E5E1D8] shadow-xs p-8 sm:p-12 relative overflow-hidden">
           {/* Blueprint watermark pattern */}
           <div 
             className="absolute inset-0 opacity-[0.03] pointer-events-none"
             style={{
-              backgroundImage: `linear-gradient(#C5A880 1px, transparent 1px), linear-gradient(90deg, #C5A880 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(#8C6842 1px, transparent 1px), linear-gradient(90deg, #8C6842 1px, transparent 1px)`,
               backgroundSize: '40px 40px'
             }}
           />
@@ -122,11 +122,11 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenConsultation, on
             {/* Left Column: Phase Identity */}
             <div className="lg:col-span-5 space-y-6">
               <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded bg-[#14171B] text-[#C5A880] font-mono text-xs font-bold uppercase tracking-widest">
+                <span className="px-3 py-1 rounded bg-[#141312] text-[#8C6842] font-mono text-xs font-bold uppercase tracking-widest">
                   {activeStep.stepCode}
                 </span>
                 <span className="text-xs font-mono text-stone-500 flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-[#B89366]" />
+                  <Clock className="w-3.5 h-3.5 text-[#8C6842]" />
                   <span>Duration: {activeStep.duration}</span>
                 </span>
               </div>

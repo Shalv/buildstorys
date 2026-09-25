@@ -49,7 +49,7 @@ export const BlogInsights: React.FC<BlogInsightsProps> = ({ onOpenConsultation }
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded bg-[#1A1E24]/90 backdrop-blur-md text-[#C5A880] text-[10px] font-mono uppercase tracking-wider font-semibold">
+                    <span className="px-2.5 py-1 rounded bg-white/95 backdrop-blur-md text-[#9A7049] border border-[#E7E5E0] text-[10px] font-mono uppercase tracking-wider font-semibold shadow-2xs">
                       {post.category}
                     </span>
                   </div>

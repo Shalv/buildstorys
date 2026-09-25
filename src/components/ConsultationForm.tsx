@@ -138,43 +138,43 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
       <div className="rounded-2xl bg-white border border-stone-200/90 shadow-xl overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12">
           
-          {/* Left Summary Column */}
-          <div className="lg:col-span-4 bg-[#1A1E24] text-white p-8 sm:p-10 flex flex-col justify-between space-y-8 border-b lg:border-b-0 lg:border-r border-stone-800">
+          {/* Left Summary Column (Light Luxury) */}
+          <div className="lg:col-span-4 bg-[#FAF8F5] text-stone-900 p-8 sm:p-10 flex flex-col justify-between space-y-8 border-b lg:border-b-0 lg:border-r border-[#E7E5E0]">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#C5A880]">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#9A7049] font-bold">
+                <Sparkles className="w-3.5 h-3.5 text-[#9A7049]" />
                 Direct Architectural Consultation
               </div>
 
-              <h3 className="font-serif text-3xl font-bold text-white leading-tight">
+              <h3 className="font-serif text-3xl font-normal text-[#1C1917] leading-tight">
                 Begin Your Story With Build Storys
               </h3>
 
-              <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-sans font-light">
                 Connect with our principal architects and project planners. We review your plot layout, architectural brief, or bare-shell specifications and deliver an actionable feasibility roadmap.
               </p>
 
-              <div className="space-y-4 pt-4 border-t border-stone-800 text-xs text-stone-300">
+              <div className="space-y-4 pt-4 border-t border-[#E7E5E0] text-xs text-stone-600">
                 <div className="flex items-start gap-3">
-                  <ShieldCheck className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                  <ShieldCheck className="w-4 h-4 text-[#9A7049] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white font-serif block text-sm">Transparent Itemized BOQ</strong>
+                    <strong className="text-stone-900 font-serif block text-sm font-semibold">Transparent Itemized BOQ</strong>
                     <span>Full clarity on materials, brands, and timeline before commitments.</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Building className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                  <Building className="w-4 h-4 text-[#9A7049] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white font-serif block text-sm">Sahakar Nagar Studio</strong>
+                    <strong className="text-stone-900 font-serif block text-sm font-semibold">Sahakar Nagar Studio</strong>
                     <span>Visit our experience studio to review genuine stone slabs, veneers, and hardware.</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <User className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                  <User className="w-4 h-4 text-[#9A7049] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white font-serif block text-sm">Single-Point Accountability</strong>
+                    <strong className="text-stone-900 font-serif block text-sm font-semibold">Single-Point Accountability</strong>
                     <span>Dedicated principal architect manages civil, structural, and interior crafts.</span>
                   </div>
                 </div>
@@ -182,17 +182,17 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
             </div>
 
             {/* Quick Contact info */}
-            <div className="pt-6 border-t border-stone-800 space-y-2 text-xs text-stone-400 font-mono">
-              <div className="flex items-center gap-2 text-stone-300">
-                <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
+            <div className="pt-6 border-t border-[#E7E5E0] space-y-2 text-xs text-stone-600 font-mono">
+              <div className="flex items-center gap-2 text-stone-800">
+                <Phone className="w-3.5 h-3.5 text-[#9A7049]" />
                 <span>+91 63667 78876 / +91 63667 78826</span>
               </div>
-              <div className="flex items-center gap-2 text-stone-300">
-                <Mail className="w-3.5 h-3.5 text-[#C5A880]" />
+              <div className="flex items-center gap-2 text-stone-800">
+                <Mail className="w-3.5 h-3.5 text-[#9A7049]" />
                 <span>{COMPANY_PROFILE.contact.primaryEmail}</span>
               </div>
-              <div className="flex items-center gap-2 text-stone-300">
-                <MapPin className="w-3.5 h-3.5 text-[#C5A880]" />
+              <div className="flex items-center gap-2 text-stone-800">
+                <MapPin className="w-3.5 h-3.5 text-[#9A7049]" />
                 <span>Sahakar Nagar, Bengaluru – 560092</span>
               </div>
             </div>

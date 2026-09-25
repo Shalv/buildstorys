@@ -181,7 +181,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-stone-900 selection:bg-[#C5A880] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F8F7F4] text-[#141312] selection:bg-[#8C6842] selection:text-white">
       
       {/* Primary Sticky Architectural Navigation */}
       <Navbar 
@@ -191,8 +191,8 @@ export default function App() {
       />
 
       {/* Main Routed Page Content */}
-      <main className="flex-1">
-        <div key={currentRoute} className="editorial-page page-enter" data-route={currentRoute.split('/')[0]}>
+      <main className="flex-1 w-full">
+        <div key={currentRoute} className="editorial-page page-enter w-full" data-route={currentRoute.split('/')[0]}>
           {renderCurrentPage()}
         </div>
       </main>

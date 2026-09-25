@@ -133,10 +133,10 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      <div className="w-full max-w-[92vw] 2xl:max-w-[1780px] mx-auto px-4 sm:px-8 lg:px-12 space-y-12">
         
         {/* 2. Category Sub-Heading Tabs & Search Bar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-stone-200 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[#E5E1D8] pb-6">
           {/* Sub-heading category tabs */}
           <div className="flex flex-wrap gap-2">
             {[
@@ -151,13 +151,13 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 <button
                   key={tab.id}
                   onClick={() => handleTabChange(tab.id)}
-                  className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
+                  className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? 'bg-[#14171B] text-[#C5A880] font-bold shadow-sm border border-[#2A2E35]'
-                      : 'bg-white border border-stone-200 text-stone-600 hover:text-stone-950 hover:border-stone-400'
+                      ? 'bg-[#141312] text-[#8C6842] font-bold shadow-xs border border-[#141312]'
+                      : 'bg-white border border-[#E5E1D8] text-stone-700 hover:text-stone-950 hover:border-stone-400'
                   }`}
                 >
-                  <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-[#C5A880]' : 'bg-stone-300'}`} />
+                  <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-[#8C6842]' : 'bg-stone-300'}`} />
                   <span>{tab.label}</span>
                 </button>
               );
@@ -172,7 +172,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               placeholder="Search project, location, specs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-lg bg-white border border-stone-300 text-xs text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#B89366] shadow-xs"
+              className="w-full pl-9 pr-4 py-2 rounded-full bg-white border border-[#E5E1D8] text-xs text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#8C6842] shadow-2xs"
             />
           </div>
         </div>
@@ -183,12 +183,12 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
             <div 
               key={project.id}
               onClick={() => onSelectProject(project)}
-              className="group cursor-pointer bg-white rounded-xl border border-stone-200/90 hover:border-[#C5A880] transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(28,25,23,0.06)] hover:shadow-[0_16px_32px_-8px_rgba(197,168,128,0.2)] flex flex-col justify-between overflow-hidden relative"
+              className="group cursor-pointer bg-white rounded-2xl border border-[#E5E1D8] hover:border-[#8C6842] transition-all duration-300 shadow-xs hover:shadow-xl flex flex-col justify-between overflow-hidden relative"
             >
               {/* Corner crosshairs */}
-              <div className="absolute top-2 left-2 text-[10px] font-mono text-stone-300 group-hover:text-[#C5A880] z-20 pointer-events-none">+</div>
-              <div className="absolute top-2 right-2 text-[10px] font-mono text-stone-300 group-hover:text-[#C5A880] z-20 pointer-events-none">+</div>
-              <div className="absolute bottom-2 right-2 text-[10px] font-mono text-stone-300 group-hover:text-[#C5A880] z-20 pointer-events-none">+</div>
+              <div className="absolute top-2 left-2 text-[10px] font-mono text-stone-300 group-hover:text-[#8C6842] z-20 pointer-events-none">+</div>
+              <div className="absolute top-2 right-2 text-[10px] font-mono text-stone-300 group-hover:text-[#8C6842] z-20 pointer-events-none">+</div>
+              <div className="absolute bottom-2 right-2 text-[10px] font-mono text-stone-300 group-hover:text-[#8C6842] z-20 pointer-events-none">+</div>
 
               {/* Top Image Preview */}
               <div className="relative h-64 overflow-hidden bg-stone-900">
@@ -202,7 +202,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
                 {/* Top Badges */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[10px] font-mono text-[#C5A880] border border-[#C5A880]/30 uppercase tracking-wider font-semibold">
+                  <span className="px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[10px] font-mono text-[#8C6842] border border-[#8C6842]/30 uppercase tracking-wider font-semibold">
                     {project.subCategory}
                   </span>
                   <span className="px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[10px] font-mono text-white/90 border border-white/20 uppercase tracking-widest">
@@ -217,7 +217,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     <span>&bull;</span>
                     <span>{project.builtUpArea}</span>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold leading-tight group-hover:text-[#E7CAA5] transition-colors">
+                  <h3 className="font-serif text-2xl font-bold leading-tight group-hover:text-[#8C6842] transition-colors">
                     {project.name}
                   </h3>
                 </div>
@@ -238,7 +238,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     {project.materialsUsed.slice(0, 3).map((mat, mIdx) => (
                       <span
                         key={mIdx}
-                        className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-stone-200 text-[10px] font-mono text-stone-700"
+                        className="px-2 py-0.5 rounded bg-[#F8F7F4] border border-[#E5E1D8] text-[10px] font-mono text-stone-700"
                       >
                         {mat}
                       </span>
@@ -252,13 +252,13 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 </div>
 
                 {/* Card Footer */}
-                <div className="pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-mono">
+                <div className="pt-4 border-t border-[#E5E1D8] flex items-center justify-between text-xs font-mono">
                   <span className="flex items-center gap-1.5 text-stone-500">
-                    <MapPin className="w-3.5 h-3.5 text-[#B89366]" />
+                    <MapPin className="w-3.5 h-3.5 text-[#8C6842]" />
                     <span className="truncate">{project.location}</span>
                   </span>
 
-                  <span className="inline-flex items-center gap-1 font-bold text-stone-900 group-hover:text-[#B89366] transition-colors uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1 font-bold text-stone-900 group-hover:text-[#8C6842] transition-colors uppercase tracking-wider">
                     <span>Inspect Dossier</span>
                     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
@@ -266,19 +266,19 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               </div>
 
               {/* Bottom Accent line */}
-              <div className="h-0.5 bg-transparent group-hover:bg-[#C5A880] transition-colors" />
+              <div className="h-0.5 bg-transparent group-hover:bg-[#8C6842] transition-colors" />
             </div>
           ))}
         </div>
 
         {/* Empty state if search returned 0 results */}
         {filteredProjects.length === 0 && (
-          <div className="py-16 text-center bg-white rounded-xl border border-stone-200 space-y-4">
+          <div className="py-16 text-center bg-white rounded-2xl border border-[#E5E1D8] space-y-4">
             <p className="font-serif text-2xl text-stone-700">No projects found matching &ldquo;{searchQuery}&rdquo;</p>
             <p className="text-xs font-mono text-stone-500">Try searching for &quot;Villa&quot;, &quot;Phoenix Kessaku&quot;, &quot;Hebbal&quot;, or &quot;Industrial&quot;.</p>
             <button
               onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
-              className="px-4 py-2 rounded bg-stone-900 text-white text-xs font-mono uppercase tracking-wider"
+              className="px-4 py-2 rounded-full bg-[#141312] text-white text-xs font-mono uppercase tracking-wider cursor-pointer"
             >
               Reset Filters
             </button>
@@ -286,12 +286,12 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
         )}
 
         {/* Consultation Callout */}
-        <div className="rounded-2xl bg-[#FAF8F5] border border-[#C5A880]/50 p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-[#F8F7F4] border border-[#E5E1D8] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
           <div className="space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#B89366]">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#8C6842]">
               Architectural Feasibility
             </span>
-            <h4 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+            <h4 className="font-serif text-2xl sm:text-3xl font-bold text-[#141312]">
               Have a plot or bare-shell property in Bengaluru?
             </h4>
             <p className="text-stone-600 text-xs sm:text-sm max-w-xl">
@@ -301,7 +301,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
           <button
             onClick={() => onConsultSimilar('New Architectural Project')}
-            className="px-6 py-3 rounded bg-[#14171B] hover:bg-[#252930] text-white text-xs font-bold uppercase tracking-wider transition-all shrink-0"
+            className="px-6 py-3 rounded-full bg-[#141312] hover:bg-[#8C6842] text-white text-xs font-bold uppercase tracking-wider transition-all shrink-0 cursor-pointer shadow-xs"
           >
             Request Site Feasibility
           </button>

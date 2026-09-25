@@ -149,7 +149,7 @@ export const FEATURED_SHOWCASE_PROJECTS = [
     description: "A contemporary residence organised around a quiet central courtyard, creating a balance between privacy, openness and natural light.",
     category: "Architecture",
     location: "Bengaluru, Karnataka",
-    image: "https://buildstorys.com/wp-content/uploads/2026/08/3-9.png",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
     builtUpArea: "4,800 sq. ft.",
     completionYear: "2023",
     highlights: ["Central internal light courtyard", "Natural stack ventilation", "Private landscaped wings", "Terracotta & teak accents"]
@@ -161,7 +161,7 @@ export const FEATURED_SHOWCASE_PROJECTS = [
     description: "Bold architectural volumes meet warm materials and open living spaces to create a residence that feels both sculptural and deeply comfortable.",
     category: "Architecture",
     location: "Bengaluru, Karnataka",
-    image: "https://buildstorys.com/wp-content/uploads/2026/08/3-11-2.png",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85",
     builtUpArea: "6,200 sq. ft.",
     completionYear: "2023",
     highlights: ["Sculptural concrete cantilevers", "Floor-to-ceiling pocket glazing", "Integrated reflection pool", "Warm oak & travertine finishes"]
@@ -173,7 +173,7 @@ export const FEATURED_SHOWCASE_PROJECTS = [
     description: "A carefully planned urban home where efficient planning, daylight and natural textures come together to create a calm everyday experience.",
     category: "Architecture",
     location: "Bengaluru, Karnataka",
-    image: "https://buildstorys.com/wp-content/uploads/2026/08/3-8-1.png",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
     builtUpArea: "3,600 sq. ft.",
     completionYear: "2022",
     highlights: ["Maximized daylight penetration", "Acoustic buffer from street", "Double-height family lounge", "Concealed utility cabinetry"]
@@ -185,7 +185,7 @@ export const FEATURED_SHOWCASE_PROJECTS = [
     description: "An adaptable studio environment designed around movement, collaboration and focused work, balancing functionality with a strong visual identity.",
     category: "Commercial & Retail",
     location: "Bengaluru, Karnataka",
-    image: "https://buildstorys.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-31-2026-02_46_32-PM.png",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
     builtUpArea: "8,500 sq. ft.",
     completionYear: "2023",
     highlights: ["Agile modular workstations", "Acoustic breakout alcoves", "High-CRI daylight lighting grid", "Tactile industrial materials"]
@@ -205,14 +205,14 @@ export const PROJECTS_DATA: Project[] = [
     completionYear: "2023",
     status: "Completed",
     tagline: "A home shaped around light.",
-    heroImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-9.png",
+    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
     galleryImages: [
-      "https://buildstorys.com/wp-content/uploads/2026/08/3-9.png",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
     ],
-    beforeImage: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-9.png",
+    beforeImage: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80",
+    afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
     designChallenge:
       "A contemporary residence organised around a quiet central courtyard, creating a balance between privacy, openness and natural light amidst a dense neighborhood.",
     solution:
@@ -246,14 +246,14 @@ export const PROJECTS_DATA: Project[] = [
     completionYear: "2023",
     status: "Completed",
     tagline: "Strong forms, soft living.",
-    heroImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-11-2.png",
+    heroImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85",
     galleryImages: [
-      "https://buildstorys.com/wp-content/uploads/2026/08/3-11-2.png",
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
     ],
-    beforeImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-11-2.png",
+    beforeImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    afterImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85",
     designChallenge:
       "Bold architectural volumes meet warm materials and open living spaces to create a residence that feels both sculptural and deeply comfortable.",
     solution:
@@ -287,14 +287,14 @@ export const PROJECTS_DATA: Project[] = [
     completionYear: "2022",
     status: "Completed",
     tagline: "Designed for city life.",
-    heroImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-8-1.png",
+    heroImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
     galleryImages: [
-      "https://buildstorys.com/wp-content/uploads/2026/08/3-8-1.png",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
     ],
-    beforeImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://buildstorys.com/wp-content/uploads/2026/08/3-8-1.png",
+    beforeImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80",
+    afterImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
     designChallenge:
       "A carefully planned urban home where efficient planning, daylight and natural textures come together to create a calm everyday experience.",
     solution:
@@ -328,12 +328,14 @@ export const PROJECTS_DATA: Project[] = [
     completionYear: "2023",
     status: "Completed",
     tagline: "Space for ideas.",
-    heroImage: "https://buildstorys.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-31-2026-02_46_32-PM.png",
+    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
     galleryImages: [
-      "https://buildstorys.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-31-2026-02_46_32-PM.png",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
     ],
+    beforeImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+    afterImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
     designChallenge:
       "An adaptable studio environment designed around movement, collaboration and focused work, balancing functionality with a strong visual identity.",
     solution:
@@ -441,9 +443,9 @@ export const PROJECTS_DATA: Project[] = [
     completionYear: "2021",
     status: "Completed",
     tagline: "Precision Engineering & Efficient Industrial Architecture",
-    heroImage: "https://buildstorys.com/wp-content/uploads/2026/08/TEXEL-INDUSTRIES-_-KRISHNA-SHELTER-DEVELOPERS-2-1.png",
+    heroImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=85",
     galleryImages: [
-      "https://buildstorys.com/wp-content/uploads/2026/08/TEXEL-INDUSTRIES-_-KRISHNA-SHELTER-DEVELOPERS-2-1.png",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=85",
       "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
     ],
     designChallenge:

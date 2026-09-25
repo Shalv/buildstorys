@@ -38,50 +38,50 @@ export const TestimonialsFaq: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg border border-stone-200 shadow-xs space-y-3 hover:border-[#C5A880] transition-all">
-              <div className="w-10 h-10 rounded bg-[#14171B] text-[#C5A880] flex items-center justify-center">
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E7E5E0] shadow-xs space-y-3 hover:border-[#9A7049] transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#9A7049] border border-[#E7E5E0] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-normal text-[#1C1917]">
                 Single-Point Accountability
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
+              <p className="text-xs text-stone-600 leading-relaxed font-sans font-light">
                 One team, one contract, and complete responsibility from initial architectural sketches to physical handover.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-stone-200 shadow-xs space-y-3 hover:border-[#C5A880] transition-all">
-              <div className="w-10 h-10 rounded bg-[#14171B] text-[#C5A880] flex items-center justify-center">
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E7E5E0] shadow-xs space-y-3 hover:border-[#9A7049] transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#9A7049] border border-[#E7E5E0] flex items-center justify-center">
                 <Lock className="w-5 h-5" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-normal text-[#1C1917]">
                 Locked Transparent BOQ
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
+              <p className="text-xs text-stone-600 leading-relaxed font-sans font-light">
                 Every material specification, timber grade, and hardware item is itemized and locked upfront with zero surprise costs.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-stone-200 shadow-xs space-y-3 hover:border-[#C5A880] transition-all">
-              <div className="w-10 h-10 rounded bg-[#14171B] text-[#C5A880] flex items-center justify-center">
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E7E5E0] shadow-xs space-y-3 hover:border-[#9A7049] transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#9A7049] border border-[#E7E5E0] flex items-center justify-center">
                 <Layers className="w-5 h-5" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-normal text-[#1C1917]">
                 3D-to-Build Fidelity
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
+              <p className="text-xs text-stone-600 leading-relaxed font-sans font-light">
                 What you approve in photorealistic 3D visualization is exactly what is delivered on site, down to millimeter tolerances.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-stone-200 shadow-xs space-y-3 hover:border-[#C5A880] transition-all">
-              <div className="w-10 h-10 rounded bg-[#14171B] text-[#C5A880] flex items-center justify-center">
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E7E5E0] shadow-xs space-y-3 hover:border-[#9A7049] transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#9A7049] border border-[#E7E5E0] flex items-center justify-center">
                 <Award className="w-5 h-5" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-normal text-[#1C1917]">
                 15+ Years Track Record
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
+              <p className="text-xs text-stone-600 leading-relaxed font-sans font-light">
                 Over 250 completed residential, commercial, and industrial milestones delivered across Bengaluru and beyond.
               </p>
             </div>

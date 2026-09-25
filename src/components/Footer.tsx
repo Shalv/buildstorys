@@ -13,8 +13,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
   };
 
   return (
-    <footer className="bg-[#0E1013] text-[#A0A6B1] text-xs border-t border-stone-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16 space-y-12">
+    <footer className="bg-[#F1EFEB] text-stone-600 text-xs border-t border-[#E5E1D8]">
+      <div className="w-full max-w-[92vw] 2xl:max-w-[1780px] mx-auto px-4 sm:px-8 lg:px-12 py-16 space-y-12">
         
         {/* Main Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -33,51 +33,51 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
               />
             </button>
 
-            <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-stone-600 leading-relaxed max-w-sm">
               Integrated architecture, interior design, planning, craftsmanship and turnkey execution in Bengaluru.
             </p>
 
-            <blockquote className="font-serif italic text-stone-300 text-sm border-l-2 border-[#C5A880] pl-3 py-1">
+            <blockquote className="font-serif italic text-stone-800 text-sm border-l-2 border-[#8C6842] pl-3 py-1">
               &ldquo;{COMPANY_PROFILE.brandPromise}&rdquo;
             </blockquote>
 
-            <div className="pt-2 flex items-center gap-4 text-xs font-mono text-stone-400">
+            <div className="pt-2 flex items-center gap-4 text-xs font-mono text-stone-500">
               <span>15+ Years Practice</span>
               <span>&bull;</span>
               <span>250+ Projects</span>
               <span>&bull;</span>
-              <span>1.2M+ Sq. Ft.</span>
+              <span>1.2M+ Sq. Ft. Delivered</span>
             </div>
           </div>
 
           {/* Col 2: Services Sub-Pages */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-stone-900">
               Services &amp; Disciplines
             </h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => onNavigate('services/architecture')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('services/architecture')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Architecture &amp; Sanctions
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services/interiors')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('services/interiors')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Bespoke Luxury Interiors
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services/turnkey')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('services/turnkey')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Turnkey Design-Build Handover
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services/visualisation')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('services/visualisation')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   3D Visualisation &amp; BIM
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="text-[#C5A880] hover:text-white transition-colors text-left font-mono text-[11px]">
+                <button onClick={() => onNavigate('services')} className="text-[#8C6842] hover:text-stone-950 transition-colors text-left font-mono text-[11px] font-semibold cursor-pointer">
                   View All 9 Services &rarr;
                 </button>
               </li>
@@ -86,42 +86,42 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
 
           {/* Col 3: Projects & Method */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-stone-900">
               Portfolio &amp; Method
             </h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => onNavigate('projects/architecture')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('projects/architecture')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Architectural Villas
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects/interiors')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('projects/interiors')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Residential Interiors
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects/commercial')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('projects/commercial')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Commercial &amp; Workspaces
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('projects/industrial')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('projects/industrial')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Industrial Facilities
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('process')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('process')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   The Build Storys Way (7 Steps)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('transformations')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('transformations')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Before &amp; After Transformations
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('estimator')} className="hover:text-white transition-colors text-left">
+                <button onClick={() => onNavigate('estimator')} className="hover:text-[#8C6842] transition-colors text-left cursor-pointer">
                   Cost &amp; Timeline Estimator
                 </button>
               </li>
@@ -130,32 +130,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
 
           {/* Col 4: Studio Contact & Hours */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-stone-900">
               Studio Location
             </h4>
-            <div className="space-y-2 text-stone-400">
+            <div className="space-y-2 text-stone-600">
               <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#C5A880] shrink-0 mt-0.5" />
+                <MapPin className="w-3.5 h-3.5 text-[#8C6842] shrink-0 mt-0.5" />
                 <span>
                   Building No. 2122/5, 1st Floor, 2nd Main Rd, D Block, Opp. BSNL Exchange, Sahakar Nagar, Bengaluru – 560092
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
-                <a href="tel:+916366778876" className="hover:text-white">
+                <Phone className="w-3.5 h-3.5 text-[#8C6842] shrink-0" />
+                <a href="tel:+916366778876" className="hover:text-stone-900 font-mono font-medium">
                   +91 63667 78876
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
-                <a href={`mailto:${COMPANY_PROFILE.contact.primaryEmail}`} className="hover:text-white">
+                <Mail className="w-3.5 h-3.5 text-[#8C6842] shrink-0" />
+                <a href={`mailto:${COMPANY_PROFILE.contact.primaryEmail}`} className="hover:text-stone-900 font-mono">
                   {COMPANY_PROFILE.contact.primaryEmail}
                 </a>
               </div>
               <div className="pt-2">
                 <button
                   onClick={() => onNavigate('contact')}
-                  className="px-4 py-2 rounded bg-[#1A1E24] hover:bg-[#252930] text-[#C5A880] border border-stone-800 text-[11px] font-semibold uppercase tracking-wider transition-colors block w-full text-center"
+                  className="px-4 py-2 rounded-full bg-white hover:bg-[#F8F7F4] text-stone-900 border border-[#E5E1D8] hover:border-[#8C6842] text-[11px] font-semibold uppercase tracking-wider transition-colors block w-full text-center shadow-2xs cursor-pointer"
                 >
                   Visit Sahakar Nagar Studio
                 </button>
@@ -165,23 +165,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-stone-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
+        <div className="pt-8 border-t border-[#E5E1D8] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
           <p>
             &copy; {new Date().getFullYear()} {COMPANY_PROFILE.legalName}. All rights reserved. Registered Council of Architecture &amp; RERA Compliant.
           </p>
           <div className="flex items-center gap-6">
-            <button onClick={() => onNavigate('testimonials')} className="hover:text-stone-300">
+            <button onClick={() => onNavigate('testimonials')} className="hover:text-stone-800 cursor-pointer">
               Reviews &amp; FAQs
             </button>
-            <button onClick={() => onNavigate('insights')} className="hover:text-stone-300">
+            <button onClick={() => onNavigate('insights')} className="hover:text-stone-800 cursor-pointer">
               Design Journal
             </button>
-            <button onClick={() => onNavigate('about')} className="hover:text-stone-300">
+            <button onClick={() => onNavigate('about')} className="hover:text-stone-800 cursor-pointer">
               Ethos
             </button>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 text-[#C5A880] hover:text-white transition-colors"
+              className="flex items-center gap-1 text-[#8C6842] hover:text-stone-900 font-bold transition-colors cursor-pointer"
             >
               <span>Back to top</span>
               <ArrowUp className="w-3.5 h-3.5" />

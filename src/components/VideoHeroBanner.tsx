@@ -62,7 +62,7 @@ export const VideoHeroBanner: React.FC<VideoHeroBannerProps> = ({
   };
 
   return (
-    <section className="chapter-hero relative min-h-[72svh] lg:min-h-[82svh] bg-[#090b0b] text-white overflow-hidden">
+    <section className="chapter-hero relative min-h-[72svh] lg:min-h-[80svh] bg-[#FAF8F5] text-stone-900 overflow-hidden border-b border-[#E7E5E0]">
       <div className="absolute inset-0">
         <img src={poster} alt="" className="h-full w-full object-cover scale-[1.03]" />
         <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster={poster}
@@ -71,61 +71,75 @@ export const VideoHeroBanner: React.FC<VideoHeroBannerProps> = ({
           <source src={videoSrc} type="video/mp4" />
           {fallbackVideoSrc && <source src={fallbackVideoSrc} type="video/mp4" />}
         </video>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,7,7,.86)_0%,rgba(5,7,7,.44)_52%,rgba(5,7,7,.1)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,7,.18),transparent_45%,rgba(5,7,7,.9))]" />
-        <div className="architectural-grain absolute inset-0 opacity-[.1]" />
+        {/* Luminous light luxury architectural scrims */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(250,248,245,0.96)_0%,rgba(250,248,245,0.86)_52%,rgba(250,248,245,0.45)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,248,245,0.5)_0%,transparent_45%,rgba(250,248,245,0.95)_100%)]" />
+        <div className="hero-film-grain absolute inset-0 opacity-[0.06]" />
       </div>
 
-      <div className="absolute left-0 top-0 bottom-0 hidden xl:flex w-20 border-r border-white/15 items-center justify-center">
-        <span className="-rotate-90 whitespace-nowrap text-[10px] uppercase tracking-[.42em] text-white/50">{chapter.label} · Bengaluru</span>
+      <div className="absolute left-0 top-0 bottom-0 hidden xl:flex w-20 border-r border-[#E7E5E0] items-center justify-center bg-[#FAF8F5]/60 backdrop-blur-xs">
+        <span className="-rotate-90 whitespace-nowrap text-[10px] uppercase tracking-[.42em] text-stone-500 font-mono font-medium">{chapter.label} · Bengaluru</span>
       </div>
 
-      <div className="relative z-10 max-w-[1500px] min-h-[72svh] lg:min-h-[82svh] mx-auto px-5 sm:px-10 xl:px-28 py-8 lg:py-12 flex flex-col justify-between">
+      <div className="relative z-10 max-w-[1500px] min-h-[72svh] lg:min-h-[80svh] mx-auto px-5 sm:px-10 xl:px-28 py-8 lg:py-12 flex flex-col justify-between">
         <div className="flex items-start justify-between gap-8">
-          <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[.22em] text-white/55">
+          <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[.22em] text-stone-600 font-mono">
             {breadcrumbs?.map((crumb, index) => (
               <React.Fragment key={crumb.label}>
-                {index > 0 && <ChevronRight className="w-3 h-3 text-[#d1ad7e]" />}
-                {crumb.action ? <button onClick={crumb.action} className="hover:text-white transition-colors">{crumb.label}</button> : <span className="text-[#e4c399]">{crumb.label}</span>}
+                {index > 0 && <ChevronRight className="w-3 h-3 text-[#9A7049]" />}
+                {crumb.action ? <button onClick={crumb.action} className="hover:text-stone-900 transition-colors cursor-pointer">{crumb.label}</button> : <span className="text-[#9A7049] font-bold">{crumb.label}</span>}
               </React.Fragment>
             ))}
           </div>
           <div className="text-right">
-            <div className="font-serif text-5xl sm:text-7xl leading-none text-white/15">{chapter.no}</div>
-            <div className="mt-1 text-[9px] uppercase tracking-[.3em] text-[#d1ad7e]">Chapter</div>
+            <div className="font-serif text-5xl sm:text-7xl leading-none text-stone-300 font-light">{chapter.no}</div>
+            <div className="mt-1 text-[9px] uppercase tracking-[.3em] text-[#9A7049] font-mono font-semibold">Chapter</div>
           </div>
         </div>
 
-        <div className="max-w-5xl py-12">
-          <div className="chapter-reveal flex items-center gap-3 text-[10px] sm:text-xs uppercase tracking-[.3em] text-[#e4c399]">
-            <span className="w-10 h-px bg-[#d1ad7e]" /> {badge.replace(/^\/\/\s*/, '')}
+        <div className="max-w-5xl py-10">
+          <div className="chapter-reveal flex items-center gap-3 text-[10px] sm:text-xs uppercase tracking-[.3em] text-[#9A7049] font-mono font-bold">
+            <span className="w-10 h-px bg-[#9A7049]" /> {badge.replace(/^\/\/\s*/, '')}
           </div>
-          <h1 className="chapter-reveal chapter-delay-1 mt-6 font-serif text-[clamp(3.2rem,7vw,7.4rem)] leading-[.88] tracking-[-.04em] font-normal max-w-5xl">
+          <h1 className="chapter-reveal chapter-delay-1 mt-5 font-serif text-[clamp(2.8rem,6.5vw,6.5rem)] leading-[0.92] tracking-[-.03em] font-normal text-[#1C1917] max-w-5xl">
             {title}
-            {italicTitle && <span className="block ml-[7vw] italic text-[#e8cda8] font-light">{italicTitle}</span>}
+            {italicTitle && <span className="block ml-[4vw] sm:ml-[6vw] italic text-[#9A7049] font-light mt-1">{italicTitle}</span>}
           </h1>
-          <div className="chapter-reveal chapter-delay-2 mt-8 lg:mt-10 grid lg:grid-cols-12 gap-6 lg:gap-10 items-end">
-            <p className="lg:col-span-7 max-w-2xl text-base sm:text-lg leading-relaxed text-white/70">{description}</p>
+          <div className="chapter-reveal chapter-delay-2 mt-7 lg:mt-9 grid lg:grid-cols-12 gap-6 lg:gap-10 items-end">
+            <p className="lg:col-span-7 max-w-2xl text-base sm:text-lg leading-relaxed text-stone-700 font-sans font-light">{description}</p>
             <div className="lg:col-span-5 flex flex-wrap lg:justify-end gap-3">
-              {primaryCta && <button onClick={primaryCta.action} className="premium-cta group">{primaryCta.text}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></button>}
-              {secondaryCta && <button onClick={secondaryCta.action} className="premium-cta premium-cta--ghost">{secondaryCta.text}</button>}
+              {primaryCta && (
+                <button onClick={primaryCta.action} className="pill-cta-primary group cursor-pointer">
+                  <span>{primaryCta.text}</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              )}
+              {secondaryCta && (
+                <button onClick={secondaryCta.action} className="pill-cta-ghost cursor-pointer">
+                  <span>{secondaryCta.text}</span>
+                </button>
+              )}
             </div>
           </div>
         </div>
 
-        <div className="chapter-reveal chapter-delay-3 border-t border-white/20 pt-5 flex flex-col sm:flex-row sm:items-end justify-between gap-5">
+        <div className="chapter-reveal chapter-delay-3 border-t border-[#E7E5E0] pt-5 flex flex-col sm:flex-row sm:items-end justify-between gap-5">
           <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {(metrics?.slice(0, 3) || chapter.notes.map((label, i) => ({ value: `0${i + 1}`, label }))).map((metric) => (
+            {(metrics?.slice(0, 4) || chapter.notes.map((label, i) => ({ value: `0${i + 1}`, label }))).map((metric) => (
               <div key={metric.label} className="min-w-24">
-                <div className="font-serif text-2xl text-[#e8cda8]">{metric.value}</div>
-                <div className="text-[9px] uppercase tracking-[.2em] text-white/45">{metric.label}</div>
+                <div className="font-serif text-2xl text-[#9A7049] font-semibold">{metric.value}</div>
+                <div className="text-[9px] uppercase tracking-[.2em] text-stone-500 font-mono">{metric.label}</div>
               </div>
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <span className="mr-2 hidden sm:inline text-[9px] uppercase tracking-[.24em] text-white/45">Ambient film</span>
-            <button onClick={toggleMute} className="film-control" aria-label={isMuted ? 'Unmute film' : 'Mute film'}>{isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}</button>
-            <button onClick={togglePlayback} className="film-control" aria-label={isPlaying ? 'Pause film' : 'Play film'}>{isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}</button>
+            <span className="mr-2 hidden sm:inline text-[9px] uppercase tracking-[.24em] text-stone-500 font-mono">Ambient film</span>
+            <button onClick={toggleMute} className="film-control" aria-label={isMuted ? 'Unmute film' : 'Mute film'}>
+              {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            </button>
+            <button onClick={togglePlayback} className="film-control" aria-label={isPlaying ? 'Pause film' : 'Play film'}>
+              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+            </button>
           </div>
         </div>
       </div>
